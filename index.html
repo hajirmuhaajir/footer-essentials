@@ -33,7 +33,6 @@
     <title>Kebijakan Privasi & Syarat Ketentuan | Muhaajir Official</title>
     
     <style>
-        /* [CSS tetap sama seperti sebelumnya, tidak ada perubahan] */
         * {
             margin: 0;
             padding: 0;
@@ -757,6 +756,175 @@
                 justify-content: center;
             }
         }
+
+        /* ===== DESKTOP OPTIMIZATION (≥1024px) ===== */
+        @media (min-width: 1024px) {
+            /* Container lebih lebar */
+            .container {
+                max-width: 1200px;
+            }
+
+            /* Header lebih lapang */
+            .header-container {
+                max-width: 1200px;
+            }
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            .back-home {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            /* Navigasi tabs lebih besar */
+            .nav-tabs {
+                padding: 8px;
+            }
+            .nav-tab {
+                padding: 14px 40px;
+                font-size: 1.1rem;
+            }
+            .nav-tab i {
+                font-size: 1.3rem;
+            }
+
+            /* Card dan typography */
+            .card {
+                padding: 60px;
+            }
+            .card-title {
+                font-size: 2.8rem;
+            }
+            .card-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.2rem;
+            }
+            .last-updated {
+                font-size: 0.95rem;
+                padding: 10px 22px;
+            }
+            h2 {
+                font-size: 2rem;
+                margin: 45px 0 20px;
+            }
+            h2 i {
+                font-size: 1.8rem;
+                padding: 10px;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+            p, li {
+                font-size: 1.05rem;
+            }
+            .highlight-box {
+                padding: 35px;
+            }
+
+            /* Grid sitemap menjadi 4 kolom tetap */
+            .sitemap-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+            .sitemap-section {
+                padding: 25px;
+            }
+            .sitemap-section h4 {
+                font-size: 1.2rem;
+            }
+
+            /* Tabel lebih proporsional */
+            th, td {
+                padding: 18px 20px;
+            }
+
+            /* ===== OPTIMASI FOOTER UNTUK DESKTOP ===== */
+            .footer {
+                padding: 80px 0 50px;
+                margin-top: 80px;
+            }
+            
+            .footer-logo {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 30px;
+            }
+            
+            .footer-links {
+                gap: 35px;
+                margin: 35px 0;
+            }
+            
+            .footer-links a {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+                border-radius: 50px;
+            }
+            
+            .footer-links a i {
+                font-size: 1.2rem;
+            }
+            
+            .github-section {
+                margin: 40px 0 25px;
+                padding: 20px 30px;
+                border-radius: 60px;
+            }
+            
+            .github-links {
+                gap: 25px;
+            }
+            
+            .github-link {
+                padding: 12px 28px;
+                font-size: 1.1rem;
+                border-radius: 50px;
+            }
+            
+            .github-link i {
+                font-size: 1.3rem;
+                margin-right: 8px;
+            }
+            
+            .license-tag {
+                padding: 4px 12px;
+                font-size: 0.75rem;
+                margin-left: 8px;
+                border-radius: 30px;
+            }
+            
+            .copyright {
+                font-size: 1rem;
+                margin-top: 40px;
+                padding-top: 25px;
+                letter-spacing: 0.5px;
+            }
+
+            /* Cookie consent lebih lebar jika muncul */
+            .cookie-consent {
+                max-width: 450px;
+                padding: 35px;
+                border-radius: 25px;
+            }
+            
+            .cookie-content strong {
+                font-size: 1.2rem;
+            }
+            
+            .cookie-content p {
+                font-size: 1rem;
+            }
+            
+            .cookie-buttons {
+                gap: 15px;
+            }
+            
+            .cookie-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -800,7 +968,7 @@
             </div>
             
             <div class="last-updated">
-                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="privacy-update">16 Februari 2026</span>
+                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="privacy-update">17 Februari 2026</span>
                 <button class="print-btn" onclick="window.print()"><i class="fas fa-print"></i> Cetak</button>
             </div>
 
@@ -949,7 +1117,7 @@
             </div>
             
             <div class="last-updated">
-                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="terms-update">16 Februari 2026</span>
+                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="terms-update">17 Februari 2026</span>
             </div>
 
             <div class="highlight-box warning">
@@ -1095,7 +1263,7 @@
             </div>
             
             <div class="last-updated">
-                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="sitemap-update">16 Februari 2026</span>
+                <i class="fas fa-calendar-alt"></i> Terakhir diperbarui: <span id="sitemap-update">17 Februari 2026</span>
                 <span class="badge">XML Tersedia</span>
             </div>
 
@@ -1252,8 +1420,8 @@
 
             <h2><i class="fas fa-history"></i> Riwayat Pembaruan</h2>
             <ul>
-                <li><strong>16 Februari 2026</strong> - update Luxury Edition</li>
-                <li><strong>15 Februari 2026</strong> - Update halaman Privacy, Terms & Sitemap</li>
+                <li><strong>17 Februari 2026</strong> - update Luxury Edition</li>
+                <li><strong>16 Februari 2026</strong> - Update halaman Privacy, Terms & Sitemap</li>
                 <li><strong>13 Februari 2026</strong> - Penambahan music player eksternal</li>
             </ul>
 
@@ -1405,7 +1573,7 @@
                 });
             }
 
-            // Fungsi untuk update tanggal otomatis (sesuai permintaan)
+            // Fungsi untuk update tanggal otomatis
             function updateDates() {
                 // Data update dalam format [bulan, tanggal, tahun]
                 const updates = [
@@ -1535,5 +1703,9 @@
 
         })();
     </script>
+    <!-- logo kecil di pojok kanan -->
+    <div style="position: fixed; bottom: 10px; right: 10px; opacity:0.2; pointer-events: none;">
+        <img src="https://i.postimg.cc/s239DrRd/IMG-20250812-164402950-hitam.png" style="height:20px;" alt="">
+    </div>
 </body>
 </html>
