@@ -2,17 +2,16 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SECURITY HEADERS (meta equivalents) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <!-- Security Headers -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), autoplay=(self)">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://i.postimg.cc; connect-src 'self'; frame-src 'none'; base-uri 'self'; form-action 'self';">
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Kebijakan Privasi, Syarat & Ketentuan, dan Sitemap Muhaajir Official – Fotografi & Musik. Dilengkapi informasi legal, lisensi, dan peta situs.">
+  <!-- SEO Meta -->
+  <meta name="description" content="Kebijakan Privasi, Syarat & Ketentuan, dan Sitemap Muhaajir Official – Fotografi & Musik.">
   <meta name="keywords" content="Muhaajir, privasi, syarat ketentuan, sitemap, kebijakan privasi, lisensi musik">
   <meta name="author" content="Muhaajir">
   <meta name="robots" content="index, follow">
@@ -26,17 +25,16 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png">
 
-  <!-- Fonts & Icons dengan SRI -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <!-- JSON-LD Structured Data (WebPage, Organization) -->
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Legal & Sitemap - Muhaajir Official",
-    "description": "Halaman kebijakan privasi, syarat ketentuan, dan peta situs Muhaajir Official.",
     "url": "https://hajirmuhaajir.github.io/footer-essentials",
     "isPartOf": {
       "@type": "WebSite",
@@ -54,12 +52,6 @@
         "https://on.soundcloud.com/m65TNUx3XarndC67jO",
         "https://github.com/hajirmuhaajir"
       ]
-    },
-    "mainEntity": {
-      "@type": "DataCatalog",
-      "name": "Konten Muhaajir",
-      "description": "12 lagu original dan 3 galeri foto",
-      "numberOfItems": "15"
     }
   }
   </script>
@@ -67,99 +59,152 @@
   <title>Legal & Sitemap | Muhaajir Official</title>
 
   <style>
-    * {
+    /* --------------------------------
+       RESET & VARIABLES
+    -------------------------------- */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     :root {
-      /* Light Mode */
-      --navy: #0a1a2f;
-      --gold: #ffd700;
-      --gold-hover: #ffeb3b;
-      --text: #333;
-      --text-light: #666;
-      --bg: #f5f7fa;
+      /* Light mode */
+      --ink: #0a0f1e;
+      --ink-light: #3d4666;
+      --ink-muted: #6b7494;
+      --paper: #f7f6f2;
+      --paper-warm: #eeecea;
+      --cream: #faf9f6;
+      --gold: #c9a84c;
+      --gold-light: #e8d08a;
+      --gold-dim: rgba(201,168,76,0.15);
+      --blue-accent: #2a5cff;
+      --blue-dim: rgba(42,92,255,0.1);
       --card-bg: #ffffff;
-      --border: #e0e0e0;
-      --shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.08);
-      --highlight-bg: #f0f7ff;
-      --table-hover: #f8f9fa;
-      --email-bg: #e8f0fe;
+      --border: rgba(10,15,30,0.1);
+      --shadow-sm: 0 2px 12px rgba(10,15,30,0.06);
+      --shadow-md: 0 8px 32px rgba(10,15,30,0.09);
+      --shadow-lg: 0 20px 60px rgba(10,15,30,0.12);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --container-padding: clamp(16px, 5vw, 28px);
     }
 
-    body.dark-mode {
-      /* Dark Mode - Navy Gelap, Teks Putih/Abu-abu */
-      --navy: #1a2a3f; /* Navy lebih terang untuk elemen */
-      --text: #e0e4e9;
-      --text-light: #a0aec0;
-      --bg: #0a0f18; /* Navy gelap untuk background */
-      --card-bg: #151f2c; /* Navy lebih terang untuk card */
-      --border: #2d3748;
-      --shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.4);
-      --highlight-bg: #1e2a3a;
-      --table-hover: #1f2b37;
-      --email-bg: #1e2a3a;
+    body.dark {
+      /* Dark mode */
+      --ink: #eef0f8;
+      --ink-light: #b0b8d8;
+      --ink-muted: #7880a0;
+      --paper: #0d1120;
+      --paper-warm: #111827;
+      --cream: #0a0f1e;
+      --gold: #d4b060;
+      --gold-light: #e8cc8a;
+      --gold-dim: rgba(212,176,96,0.12);
+      --blue-accent: #4d7aff;
+      --blue-dim: rgba(77,122,255,0.12);
+      --card-bg: #111827;
+      --border: rgba(238,240,248,0.08);
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.3);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.4);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    /* --------------------------------
+       BASE & LAYOUT
+    -------------------------------- */
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+      width: 100%;
+      min-height: 100vh;
     }
 
-    /* Progress Bar */
-    .progress-container {
+    /* Scrollable container */
+    .app-viewport {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: var(--cream);
+      transition: background var(--transition);
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    .app-viewport::before {
+      content: '';
       position: fixed;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
-      height: 4px;
-      background: transparent;
-      z-index: 1001;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.6;
     }
+
+    /* --------------------------------
+       PROGRESS BAR
+    -------------------------------- */
     .progress-bar {
-      height: 4px;
-      background: var(--gold);
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 0%;
-      box-shadow: 0 0 10px var(--gold);
-      transition: width 0.1s ease;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--blue-accent));
+      z-index: 1001;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 12px var(--gold);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
+    /* --------------------------------
+       HEADER
+    -------------------------------- */
     .header {
-      background: var(--navy);
-      color: white;
-      padding: 12px 0;
+      background: var(--ink);
+      color: #fff;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      border-bottom: 3px solid var(--gold);
-      transition: background-color 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      width: 100%;
     }
 
-    .header-container {
+    .header::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .header-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 14px var(--container-padding);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      gap: 16px;
+      width: 100%;
     }
 
     .logo-link {
@@ -167,837 +212,1991 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
-      color: white;
-      transition: transform 0.3s ease;
+      color: #fff;
+      transition: opacity var(--transition);
+      flex-shrink: 1;
+      min-width: 0;
     }
-    .logo-link:hover { transform: translateY(-2px); }
-    .logo-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 4px; }
+
+    .logo-link:hover {
+      opacity: 0.85;
+    }
 
     .header-logo {
-      width: 42px;
-      height: 42px;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
-      background: rgba(255,255,255,0.1);
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      padding: 4px;
+      object-fit: contain;
+      border: 1.5px solid rgba(201,168,76,0.5);
+      padding: 3px;
+      background: rgba(255,255,255,0.06);
+      flex-shrink: 0;
     }
 
     .logo-text {
-      font-weight: 700;
-      font-size: 1.25rem;
-      letter-spacing: 0.5px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle:hover {
+      background: var(--gold-dim);
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
     .back-home {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 10px 22px;
+      background: transparent;
+      color: #fff;
+      padding: 9px 20px;
       border-radius: 40px;
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all var(--transition);
       display: flex;
       align-items: center;
-      gap: 10px;
-      border: 1px solid var(--gold);
-      box-shadow: 0 4px 12px rgba(255,215,0,0.25);
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.2px;
+      white-space: nowrap;
     }
-    .back-home:hover {
-      background: var(--gold-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(255,215,0,0.35);
-    }
-    .back-home:focus-visible { outline: 2px solid white; outline-offset: 4px; }
 
-    /* Navigation Tabs */
+    .back-home:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* --------------------------------
+       HERO SECTION
+    -------------------------------- */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      padding: clamp(40px, 8vw, 72px) var(--container-padding) clamp(48px, 10vw, 80px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 50%, rgba(42,92,255,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold-light);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -1px;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.55);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      font-weight: 300;
+      padding: 0 10px;
+      width: 100%;
+    }
+
+    /* --------------------------------
+       NAVIGATION TABS
+    -------------------------------- */
+    .nav-area {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      transform: translateY(-28px);
+      width: 100%;
+    }
+
     .nav-tabs {
       background: var(--card-bg);
-      border-radius: 60px;
-      padding: 6px;
-      display: inline-flex;
-      margin: 35px auto 25px;
-      box-shadow: var(--shadow);
       border: 1px solid var(--border);
+      border-radius: 60px;
+      padding: 5px;
+      display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-md);
+      gap: 4px;
+      transition: background var(--transition), border-color var(--transition);
+      flex: 1 1 auto;
+      min-width: min(300px, 100%);
     }
 
     .nav-tab {
-      padding: 12px 30px;
+      padding: 10px 16px;
       border-radius: 40px;
       text-decoration: none;
-      color: var(--text-light);
+      color: var(--ink-muted);
       font-weight: 600;
-      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      transition: all var(--transition);
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.95rem;
+      gap: 6px;
       border: none;
       background: transparent;
       cursor: pointer;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      flex: 1 1 auto;
+      justify-content: center;
     }
-    .nav-tab i { font-size: 1.1rem; }
-    .nav-tab.active {
-      background: var(--navy);
-      color: white;
-      box-shadow: 0 5px 15px rgba(10,26,47,0.3);
-      border: 1px solid var(--gold);
-    }
-    .nav-tab:hover:not(.active) {
-      background: var(--border);
-      color: var(--text);
-    }
-    .nav-tab:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-    /* Cards */
+    .nav-tab i {
+      font-size: 0.85rem;
+    }
+
+    .nav-tab.active {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(10,15,30,0.2);
+    }
+
+    body.dark .nav-tab.active {
+      background: var(--blue-accent);
+      box-shadow: 0 4px 14px rgba(77,122,255,0.3);
+    }
+
+    .nav-tab:hover:not(.active) {
+      color: var(--ink);
+      background: var(--paper-warm);
+    }
+
+    .reading-badge {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      font-size: 0.8rem;
+      padding: 8px 16px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+      font-weight: 500;
+      transition: background var(--transition), border-color var(--transition);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .reading-badge i {
+      color: var(--gold);
+    }
+
+    /* --------------------------------
+       MAIN LAYOUT: SIDEBAR + CONTENT
+    -------------------------------- */
+    .content-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--container-padding) 60px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: clamp(16px, 3vw, 32px);
+      align-items: start;
+      width: 100%;
+    }
+
+    /* Table of Contents */
+    .toc {
+      position: sticky;
+      top: 100px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: background var(--transition), border-color var(--transition);
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .toc-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-list li {
+      margin-bottom: 4px;
+    }
+
+    .toc-list a {
+      display: block;
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 6px 8px;
+      border-radius: 6px;
+      transition: all var(--transition);
+      font-weight: 500;
+      line-height: 1.3;
+      word-wrap: break-word;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active-toc {
+      color: var(--blue-accent);
+      background: var(--blue-dim);
+    }
+
+    .toc-section-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      font-weight: 700;
+      padding: 8px 8px 2px;
+      display: block;
+    }
+
+    /* Cards Column */
+    .cards-col {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      width: 100%;
+      min-width: 0;
+    }
+
     .card {
       background: var(--card-bg);
-      border-radius: 30px;
-      padding: 45px;
-      box-shadow: var(--shadow);
-      margin-bottom: 40px;
       border: 1px solid var(--border);
-      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 24px;
+      padding: clamp(24px, 4vw, 44px);
+      box-shadow: var(--shadow-md);
+      transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
       scroll-margin-top: 100px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.5s ease both;
+      width: 100%;
     }
-    .card:hover { box-shadow: var(--shadow-hover); }
+
+    .card:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 0.16s;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--blue-accent), var(--gold));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+    }
 
     .card-header {
       display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 25px;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
       padding-bottom: 20px;
-      border-bottom: 2px solid var(--border);
-      transition: border-color 0.3s ease;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
     }
 
     .card-icon {
-      width: 60px;
-      height: 60px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 20px;
+      width: 52px;
+      height: 52px;
+      background: var(--ink);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      border: 1px solid var(--gold);
-      transition: background-color 0.3s ease;
+      font-size: 1.4rem;
+      color: var(--gold-light);
+      flex-shrink: 0;
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+
+    body.dark .card-icon {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .card-header-text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .card-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
     }
 
     .card-title {
-      font-size: 2.2rem;
-      color: var(--text);
-      font-weight: 700;
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--ink);
+      line-height: 1.2;
       letter-spacing: -0.5px;
-      transition: color 0.3s ease;
+      transition: color var(--transition);
+      word-wrap: break-word;
     }
 
-    .last-updated {
-      display: inline-block;
-      background: var(--email-bg);
-      color: var(--text);
-      padding: 8px 18px;
+    .meta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--paper-warm);
+      color: var(--ink-light);
+      padding: 6px 12px;
       border-radius: 40px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      margin-bottom: 25px;
       border: 1px solid var(--border);
-      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      transition: background var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+
+    .meta-chip i {
+      font-size: 0.75rem;
+      color: var(--gold);
     }
 
     .badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 4px 12px;
-      border-radius: 30px;
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--blue-accent);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 40px;
+      font-size: 0.7rem;
       font-weight: 700;
-      margin-left: 10px;
       letter-spacing: 0.5px;
+      white-space: nowrap;
     }
 
-    h2 {
-      font-size: 1.6rem;
-      color: var(--text);
-      margin: 35px 0 15px;
+    .badge.gold {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    /* Section headings */
+    .section-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin: 32px 0 14px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      transition: color 0.3s ease;
+      gap: 12px;
+      transition: color var(--transition);
+      scroll-margin-top: 100px;
+      flex-wrap: wrap;
     }
-    h2 i {
-      color: var(--gold);
-      font-size: 1.4rem;
-      background: rgba(255,215,0,0.1);
-      padding: 8px;
+
+    .section-heading .num {
+      width: 26px;
+      height: 26px;
+      background: var(--gold);
+      color: var(--ink);
       border-radius: 50%;
+      font-size: 0.7rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'DM Sans', sans-serif;
     }
 
-    h3 {
+    /* Typography */
+    p {
+      color: var(--ink-light);
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      transition: color var(--transition);
+      word-wrap: break-word;
+    }
+
+    p a {
+      color: var(--blue-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-wrap: break-word;
+    }
+
+    ul, ol {
+      color: var(--ink-light);
+      margin: 10px 0 18px 22px;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+      word-wrap: break-word;
+    }
+
+    li strong {
+      color: var(--ink);
+    }
+
+    code {
+      background: var(--paper-warm);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      word-wrap: break-word;
+    }
+
+    /* Callout boxes */
+    .callout {
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      margin: 20px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .callout.info {
+      background: var(--blue-dim);
+      border: 1px solid rgba(42,92,255,0.2);
+    }
+
+    .callout.success {
+      background: rgba(16,185,129,0.07);
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    .callout.warning {
+      background: rgba(245,158,11,0.07);
+      border: 1px solid rgba(245,158,11,0.2);
+    }
+
+    .callout-icon {
       font-size: 1.2rem;
-      margin: 25px 0 10px;
-      color: var(--text);
-      font-weight: 600;
-      transition: color 0.3s ease;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    p { margin-bottom: 15px; color: var(--text-light); transition: color 0.3s ease; }
-    ul, ol { margin: 15px 0 20px 25px; color: var(--text-light); transition: color 0.3s ease; }
-    li { margin-bottom: 8px; }
-    li strong { color: var(--text); }
-
-    .highlight-box {
-      background: var(--highlight-bg);
-      border-left: 4px solid var(--navy);
-      padding: 25px;
-      border-radius: 15px;
-      margin: 25px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-      transition: background-color 0.3s ease, border-left-color 0.3s ease;
+    .callout.info .callout-icon {
+      color: var(--blue-accent);
     }
-    .highlight-box.success { background: #ecfdf5; border-left-color: #10b981; }
-    .highlight-box.warning { background: #fffbeb; border-left-color: #f59e0b; }
 
-    /* Responsive Table */
-    .table-responsive {
+    .callout.success .callout-icon {
+      color: #10b981;
+    }
+
+    .callout.warning .callout-icon {
+      color: #f59e0b;
+    }
+
+    .callout-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .callout-text strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    .callout-text p {
+      color: var(--ink-light);
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    /* Table */
+    .table-wrap {
       overflow-x: auto;
-      margin: 25px 0;
-      border-radius: 15px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      margin: 20px 0;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      background: var(--card-bg);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      min-width: 500px;
     }
+
+    thead {
+      background: var(--ink);
+    }
+
     th {
-      background: var(--navy);
-      color: white;
-      font-weight: 600;
-      padding: 15px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 16px;
       text-align: left;
     }
+
     td {
-      padding: 15px;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--border);
-      color: var(--text-light);
-      transition: border-color 0.3s ease, color 0.3s ease;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      transition: color var(--transition), background var(--transition);
     }
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: var(--table-hover); }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover td {
+      background: var(--paper-warm);
+    }
 
     td a {
-      color: var(--gold);
+      color: var(--blue-accent);
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-weight: 500;
+      transition: color var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      word-wrap: break-word;
     }
+
+    td a::after {
+      content: '↗';
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
     td a:hover {
-      color: var(--gold-hover);
       text-decoration: underline;
     }
 
+    /* Platform icons */
+    .platform-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .pi-yt {
+      background: rgba(255,0,0,0.1);
+      color: #ff0000;
+    }
+
+    .pi-tt {
+      background: rgba(0,0,0,0.08);
+      color: var(--ink);
+    }
+
+    .pi-ig {
+      background: rgba(214,94,233,0.1);
+      color: #d65ee9;
+    }
+
+    .pi-sc {
+      background: rgba(255,85,0,0.1);
+      color: #ff5500;
+    }
+
+    .pi-gh {
+      background: rgba(10,15,30,0.08);
+      color: var(--ink);
+    }
+
+    body.dark .pi-tt,
+    body.dark .pi-gh {
+      background: rgba(255,255,255,0.08);
+      color: var(--ink);
+    }
+
+    /* Sitemap grid */
     .sitemap-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin: 30px 0;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+      width: 100%;
     }
-    .sitemap-section {
-      background: var(--highlight-bg);
-      padding: 20px;
-      border-radius: 20px;
+
+    .sitemap-card {
+      background: var(--paper-warm);
       border: 1px solid var(--border);
-      transition: background-color 0.3s ease, border-color 0.3s ease;
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      transition: all var(--transition);
+      width: 100%;
     }
-    .sitemap-section h4 {
-      color: var(--text);
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.3s ease;
+
+    .sitemap-card:hover {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
     }
-    .sitemap-section ul { margin-left: 0; list-style: none; }
-    .sitemap-section li {
-      margin-bottom: 12px;
+
+    .sitemap-card-head {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--text-light);
-    }
-    .sitemap-section a {
-      color: var(--text-light);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .sitemap-section a:hover { color: var(--gold); text-decoration: underline; }
-    .stat-badge {
-      background: var(--navy);
-      color: white;
-      padding: 3px 10px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      margin-left: 8px;
+      margin-bottom: 14px;
     }
 
-    /* Contact email */
-    .contact-email {
-      display: inline-block;
-      background: var(--email-bg);
-      padding: 5px 15px;
-      border-radius: 30px;
-      color: var(--text);
-      font-weight: 600;
-      margin: 5px 0;
-      border: 1px solid var(--border);
-      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
-    }
-    .contact-email:hover {
-      background: var(--gold);
-      color: var(--navy);
-      border-color: var(--gold);
-    }
-    .contact-email:active {
-      transform: scale(0.98);
+    .sitemap-card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--ink);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
     }
 
-    /* Toast Notification */
-    .toast-message {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: var(--navy);
-      color: white;
-      padding: 12px 30px;
-      border-radius: 50px;
+    .sitemap-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      word-wrap: break-word;
+    }
+
+    .sitemap-stat {
+      font-size: 1.8rem;
+      font-family: 'DM Serif Display', serif;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 4px;
+      word-wrap: break-word;
+    }
+
+    .sitemap-stat-label {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+
+    /* Album chips */
+    .album-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .album-chip {
+      background: var(--ink);
+      color: rgba(255,255,255,0.85);
+      padding: 6px 12px;
+      border-radius: 40px;
+      font-size: 0.78rem;
       font-weight: 600;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--gold);
-      z-index: 9999;
-      opacity: 0;
-      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       white-space: nowrap;
     }
-    .toast-message.show {
+
+    .album-chip .count {
+      background: var(--gold);
+      color: var(--ink);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    /* Email chips */
+    .email-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .email-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      color: var(--ink-light);
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+
+    .email-chip i {
+      color: var(--gold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .email-chip:hover {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .email-chip:hover i {
+      color: var(--gold-light);
+    }
+
+    .email-chip .copy-hint {
+      font-size: 0.7rem;
+      opacity: 0;
+      transition: opacity var(--transition);
+      color: var(--gold-light);
+      white-space: nowrap;
+    }
+
+    .email-chip:hover .copy-hint {
+      opacity: 1;
+    }
+
+    /* License grid */
+    .license-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+      width: 100%;
+    }
+
+    .license-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 12px;
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .license-card:hover {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+
+    .license-card .license-type {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .license-card strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      word-wrap: break-word;
+    }
+
+    .license-card .license-desc {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      word-wrap: break-word;
+    }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      padding: 6px 12px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .print-btn:hover {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    /* --------------------------------
+       FOOTER
+    -------------------------------- */
+    .footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.7);
+      padding: 50px var(--container-padding) 30px;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(201,168,76,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .footer-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 1.5px solid rgba(201,168,76,0.4);
+      padding: 6px;
+      background: rgba(255,255,255,0.05);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      word-wrap: break-word;
+    }
+
+    .footer-tagline {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 28px;
+      letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .footer-link:hover {
+      background: rgba(201,168,76,0.15);
+      border-color: rgba(201,168,76,0.4);
+      color: var(--gold-light);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: all var(--transition);
+    }
+
+    .social-link:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    .github-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 40px;
+      transition: all var(--transition);
+    }
+
+    .github-link:hover {
+      border-color: rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      background: rgba(201,168,76,0.07);
+    }
+
+    .license-tag {
+      background: var(--gold);
+      color: var(--ink);
+      padding: 2px 6px;
+      border-radius: 20px;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .footer-divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(201,168,76,0.3);
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .copyright {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --------------------------------
+       BACK TO TOP
+    -------------------------------- */
+    #backToTop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: #fff;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      z-index: 99;
+      transition: all var(--transition);
+      font-size: 0.9rem;
+    }
+
+    #backToTop:hover {
+      background: var(--gold);
+      color: var(--ink);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    /* --------------------------------
+       TOAST NOTIFICATION
+    -------------------------------- */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(201,168,76,0.3);
+      box-shadow: var(--shadow-lg);
+      z-index: 9998;
+      opacity: 0;
+      transition: all var(--transition);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 90vw;
+      width: auto;
+    }
+
+    .toast.show {
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
 
-    /* Footer */
-    .footer {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-      padding: 50px 0 30px;
-      margin-top: 60px;
-      border-top: 3px solid var(--gold);
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-    .footer-logo {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 20px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      padding: 8px;
-      border: 2px solid var(--gold);
-      object-fit: contain;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 25px 0;
-      flex-wrap: wrap;
-    }
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      opacity: 0.9;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.08);
-      padding: 8px 20px;
-      border-radius: 40px;
-      border: 1px solid rgba(255,215,0,0.3);
-      font-weight: 500;
-    }
-    .footer-links a:hover {
-      opacity: 1;
-      background: var(--gold);
-      color: var(--navy);
-      transform: translateY(-3px);
-      border-color: var(--gold);
-      box-shadow: 0 5px 15px rgba(255,215,0,0.3);
-    }
-    .footer-links a:focus-visible { outline: 2px solid white; outline-offset: 4px; }
-
-    .github-section {
-      margin: 25px 0 15px;
-      padding: 15px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 50px;
-      display: inline-block;
-      border: 1px solid rgba(255,215,0,0.3);
-    }
-    .github-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      align-items: center;
-    }
-    .github-link {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,215,0,0.1);
-      padding: 8px 18px;
-      border-radius: 40px;
-      border: 1px solid rgba(255,215,0,0.3);
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-    }
-    .github-link:hover {
-      background: var(--gold);
-      color: var(--navy);
-      transform: translateY(-2px);
-      border-color: var(--gold);
-    }
-    .license-tag {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 3px 10px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      margin-left: 5px;
-      letter-spacing: 0.3px;
+    .toast i {
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
-    /* Back to Top */
-    #backToTop {
+    .toast span {
+      word-wrap: break-word;
+    }
+
+    /* --------------------------------
+       COOKIE BANNER
+    -------------------------------- */
+    .cookie-banner {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--navy);
-      color: white;
-      border: none;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      z-index: 99;
-      border: 1px solid var(--gold);
-      transition: all 0.3s ease;
-    }
-    #backToTop:hover {
-      background: var(--gold);
-      color: var(--navy);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(255,215,0,0.4);
-    }
-    #backToTop:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-
-    .print-btn {
-      background: var(--card-bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      padding: 8px 16px;
-      border-radius: 40px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      transition: all 0.3s ease;
-      margin-left: 15px;
-    }
-    .print-btn:hover {
-      background: var(--navy);
-      color: white;
-      border-color: var(--gold);
-    }
-    .print-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-
-    /* Cookie Consent */
-    .cookie-consent {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      right: 30px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
       max-width: 400px;
+      width: calc(100% - 40px);
       background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
       display: none;
       z-index: 1000;
-      border: 1px solid var(--border);
+      transition: background var(--transition), border-color var(--transition);
       margin: 0 auto;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
-    .cookie-content strong, .cookie-content p {
-      color: var(--text);
-    }
-    .cookie-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
-    .cookie-btn {
-      background: var(--navy);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 40px;
-      cursor: pointer;
-      font-weight: 600;
-      flex: 1;
-      transition: all 0.3s ease;
-      border: 1px solid var(--gold);
-    }
-    .cookie-btn.secondary {
-      background: var(--border);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .cookie-btn:hover { transform: translateY(-2px); }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .header-container { flex-direction: column; text-align: center; }
-      .logo-link { width: 100%; justify-content: center; }
-      .nav-tabs { border-radius: 30px; width: 100%; } /* Lebih ramping */
-      .nav-tab { padding: 10px 16px; font-size: 0.9rem; flex: 1; }
-      .card { padding: 25px; }
-      .card-title { font-size: 1.8rem; }
-      .footer-links a { padding: 8px 16px; }
+    .cookie-banner-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
     }
-    @media (max-width: 480px) {
-      .nav-tabs { width: 100%; }
-      .nav-tab { padding: 10px 8px; }
-      .back-home span { display: none; }
+
+    .cookie-banner-head i {
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .cookie-banner-head strong {
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .cookie-banner p {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+
+    .cookie-btns {
+      display: flex;
+      gap: 10px;
+    }
+
+    .cookie-btn {
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: 40px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--paper-warm);
+      color: var(--ink-light);
+      transition: all var(--transition);
+    }
+
+    .cookie-btn.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .cookie-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .cookie-btn.primary:hover {
+      background: var(--blue-accent);
+      border-color: var(--blue-accent);
+    }
+
+    /* --------------------------------
+       KEYFRAMES
+    -------------------------------- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --------------------------------
+       RESPONSIVE
+    -------------------------------- */
+    @media (max-width: 900px) {
+      .content-wrap {
+        grid-template-columns: 1fr;
+      }
+      .toc {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo-link {
+        justify-content: center;
+        width: 100%;
+      }
+      .header-actions {
+        width: 100%;
+        justify-content: center;
+      }
+      .nav-area {
+        flex-direction: column;
+      }
+      .nav-tabs {
+        width: 100%;
+      }
+      .nav-tab {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+      .reading-badge {
+        width: 100%;
+        justify-content: center;
+      }
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .meta-chip {
+        width: 100%;
+        justify-content: center;
+      }
+      .badge {
+        width: 100%;
+        justify-content: center;
+      }
+      .print-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero-eyebrow {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card-title {
+        font-size: 1.4rem;
+      }
+      .section-heading {
+        font-size: 1.1rem;
+      }
+      .sitemap-grid {
+        grid-template-columns: 1fr;
+      }
+      .license-grid {
+        grid-template-columns: 1fr;
+      }
+      .email-chip {
+        width: 100%;
+        justify-content: center;
+      }
+      .email-chip .copy-hint {
+        opacity: 1;
+      }
+      .github-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .github-link {
+        width: 100%;
+        justify-content: center;
+      }
+      .cookie-banner {
+        left: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        padding: 16px;
+      }
+      .cookie-btns {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      .header,
+      .nav-area,
+      .toc,
+      .cookie-banner,
+      #backToTop,
+      .toast,
+      .theme-toggle,
+      .progress-bar {
+        display: none !important;
+      }
+      .content-wrap {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+      }
+      .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+      .app-viewport::before {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Scroll Progress Bar -->
-  <div class="progress-container" role="progressbar" aria-label="Scroll progress">
-    <div class="progress-bar" id="scrollProgressBar"></div>
-  </div>
+  <div class="app-viewport">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Scroll progress"></div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-container">
-      <a href="https://hajirmuhaajir.github.io/main-showcase/" class="logo-link" aria-label="Muhaajir Official - Beranda">
-        <img src="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png" alt="Logo Muhaajir" class="header-logo" decoding="async" loading="lazy">
-        <span class="logo-text">Muhaajir Official</span>
-      </a>
-      <a href="https://hajirmuhaajir.github.io/main-showcase/" class="back-home" aria-label="Kembali ke Beranda" rel="noopener noreferrer">
-        <i class="fas fa-arrow-left" aria-hidden="true"></i>
-        <span>Kembali ke Beranda</span>
-      </a>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- Navigation Tabs -->
-    <div style="text-align: center;">
-      <div class="nav-tabs" role="tablist">
-        <a href="#privacy" class="nav-tab active" id="tab-privacy" role="tab" aria-selected="true" aria-controls="privacy">
-          <i class="fas fa-shield-alt" aria-hidden="true"></i> Privasi
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="https://hajirmuhaajir.github.io/main-showcase/" class="logo-link" aria-label="Beranda Muhaajir">
+          <img src="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png" alt="Logo Muhaajir" class="header-logo" loading="lazy" decoding="async">
+          <span class="logo-text">Muhaajir Official</span>
         </a>
-        <a href="#terms" class="nav-tab" id="tab-terms" role="tab" aria-selected="false" aria-controls="terms">
-          <i class="fas fa-file-contract" aria-hidden="true"></i> Syarat & Ketentuan
-        </a>
-        <a href="#sitemap" class="nav-tab" id="tab-sitemap" role="tab" aria-selected="false" aria-controls="sitemap">
-          <i class="fas fa-sitemap" aria-hidden="true"></i> Sitemap
-        </a>
-      </div>
-    </div>
-
-    <!-- PRIVACY CARD -->
-    <section class="card" id="privacy" role="tabpanel" aria-labelledby="tab-privacy">
-      <div class="card-header">
-        <div class="card-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
-        <h1 class="card-title">Kebijakan Privasi</h1>
-      </div>
-      <!-- Tanggal STATIS -->
-      <div class="last-updated">
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Versi 1.2 - 12 Agustus 2025
-        <button class="print-btn" onclick="window.print()" aria-label="Cetak halaman"><i class="fas fa-print" aria-hidden="true"></i> Cetak</button>
-      </div>
-      <div class="highlight-box">
-        <i class="fas fa-heart" style="color: var(--gold); margin-right: 10px;" aria-hidden="true"></i>
-        <strong>Komitmen Privasi:</strong> Saya, Muhaajir, berkomitmen melindungi privasi Anda.
-      </div>
-      <h2><i class="fas fa-database"></i> 1. Informasi yang Dikumpulkan</h2>
-      <p>Data kontak (nama, email) dari form, data teknis (IP, browser), dan preferensi tema.</p>
-      <h2><i class="fas fa-cookie-bite"></i> 2. Cookies</h2>
-      <p>Menggunakan cookies fungsional (darkMode, lastTrack) dan analitik (Google Analytics).</p>
-      <h2><i class="fas fa-envelope"></i> 3. Formulir Kontak (Formspree)</h2>
-      <p>Data dikirim ke Formspree, disimpan maksimal 30 hari. <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Kebijakan Formspree</a>.</p>
-      <h2><i class="fas fa-share-alt"></i> 4. Pihak Ketiga</h2>
-      <p>YouTube, GitHub, TikTok, Instagram, SoundCloud. Interaksi tunduk pada kebijakan mereka.</p>
-      <h2><i class="fas fa-lock"></i> 5. Keamanan</h2>
-      <p>HTTPS, validasi input, akses terbatas.</p>
-      <h2><i class="fas fa-user-check"></i> 6. Hak Anda (GDPR/UU PDP)</h2>
-      <p>Akses, hapus, perbaiki data – hubungi email di bawah.</p>
-    </section>
-
-    <!-- TERMS CARD -->
-    <section class="card" id="terms" role="tabpanel" aria-labelledby="tab-terms">
-      <div class="card-header">
-        <div class="card-icon"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
-        <h1 class="card-title">Syarat & Ketentuan</h1>
-      </div>
-      <!-- Tanggal STATIS -->
-      <div class="last-updated">
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Versi 2.1 - 12 Agustus 2025
-      </div>
-      <h2><i class="fas fa-copyright"></i> Lisensi Hak Cipta Musik</h2>
-      <ul>
-        <li><strong>Personal use:</strong> Streaming dan download untuk pribadi, non-komersial.</li>
-        <li><strong>Commercial use:</strong> Lisensi tersedia, hubungi email.</li>
-        <li><strong>Cover/remix:</strong> Diperbolehkan dengan kredit ke Muhaajir.</li>
-      </ul>
-      <p>Semua konten (audio, foto, teks) dilindungi hak cipta. Dilarang distribusi ulang tanpa izin.</p>
-    </section>
-
-    <!-- SITEMAP CARD -->
-    <section class="card" id="sitemap" role="tabpanel" aria-labelledby="tab-sitemap">
-      <div class="card-header">
-        <div class="card-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
-        <h1 class="card-title">Sitemap</h1>
-      </div>
-      <!-- Tanggal STATIS -->
-      <div class="last-updated">
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i> Versi 1.0 - 12 Agustus 2025
-        <span class="badge">XML Tersedia</span>
-      </div>
-      <!-- Statistik -->
-      <div class="sitemap-grid">
-        <div class="sitemap-section">
-          <h4><i class="fas fa-music"></i> Musik</h4>
-          <ul><li><i class="fas fa-check-circle" style="color:var(--gold);"></i> 12 lagu original (Fragmen Suara:5, Resonansi:7)</li></ul>
-        </div>
-        <div class="sitemap-section">
-          <h4><i class="fas fa-camera"></i> Galeri</h4>
-          <ul><li><i class="fas fa-check-circle" style="color:var(--gold);"></i> 3 foto</li></ul>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+          <a href="https://hajirmuhaajir.github.io/main-showcase/" class="back-home" rel="noopener noreferrer">
+            <i class="fas fa-arrow-left"></i>
+            <span>Kembali</span>
+          </a>
         </div>
       </div>
-      <!-- Tabel media sosial dengan scroll di HP -->
-      <h2><i class="fas fa-link"></i> Media Sosial</h2>
-      <div class="table-responsive">
-        <table>
-          <thead><tr><th>Platform</th><th>Link</th></tr></thead>
-          <tbody>
-            <tr><td>YouTube</td><td><a href="https://www.youtube.com/@hajirstein" target="_blank" rel="noopener noreferrer">@hajirstein</a></td></tr>
-            <tr><td>TikTok</td><td><a href="https://www.tiktok.com/@muhaajir_muhaajir" target="_blank" rel="noopener noreferrer">@muhaajir_muhaajir</a></td></tr>
-            <tr><td>Instagram</td><td><a href="https://www.instagram.com/muhaajirere" target="_blank" rel="noopener noreferrer">@muhaajirere</a></td></tr>
-            <tr><td>SoundCloud</td><td><a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" target="_blank" rel="noopener noreferrer">Muhaajir</a></td></tr>
-            <tr><td>GitHub</td><td><a href="https://hajirmuhaajir.github.io" target="_blank" rel="noopener noreferrer">hajirmuhaajir</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <h2><i class="fas fa-envelope"></i> Kontak Email</h2>
-      <div style="display:flex; flex-wrap:wrap; gap:15px;">
-        <span class="contact-email" data-email="muhaajirmuhaajir9@hotmail.com" tabindex="0" role="button" aria-label="Salin email muhaajirmuhaajir9@hotmail.com"><i class="fas fa-envelope"></i> muhaajirmuhaajir9@hotmail.com</span>
-        <span class="contact-email" data-email="muhaajirmuhaajir9@gmail.com" tabindex="0" role="button" aria-label="Salin email muhaajirmuhaajir9@gmail.com"><i class="fas fa-envelope"></i> muhaajirmuhaajir9@gmail.com</span>
-        <span class="contact-email" data-email="muhaajirmuhaajir9@proton.me" tabindex="0" role="button" aria-label="Salin email muhaajirmuhaajir9@proton.me"><i class="fas fa-envelope"></i> muhaajirmuhaajir9@proton.me</span>
-      </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <img src="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png" alt="Muhaajir Logo" class="footer-logo" decoding="async" loading="lazy">
-    <div class="footer-links">
-      <a href="#privacy" aria-label="Ke bagian Privasi" rel="noopener noreferrer"><i class="fas fa-shield-alt"></i> Privasi</a>
-      <a href="#terms" aria-label="Ke bagian Syarat" rel="noopener noreferrer"><i class="fas fa-file-contract"></i> Syarat</a>
-      <a href="#sitemap" aria-label="Ke bagian Sitemap" rel="noopener noreferrer"><i class="fas fa-sitemap"></i> Sitemap</a>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-eyebrow">
+        <i class="fas fa-scroll"></i>
+        Dokumen Legal
+      </div>
+      <h1>Privasi, Syarat &<br><em>Peta Situs</em></h1>
+      <p class="hero-sub">Transparansi penuh tentang cara data dikelola dan hak atas konten Muhaajir Official.</p>
+    </section>
+
+    <!-- Navigation Tabs + Reading Time -->
+    <div class="nav-area">
+      <nav class="nav-tabs" role="tablist" aria-label="Navigasi halaman">
+        <a href="#privacy" class="nav-tab active" role="tab" aria-selected="true">
+          <i class="fas fa-shield-alt"></i> Privasi
+        </a>
+        <a href="#terms" class="nav-tab" role="tab" aria-selected="false">
+          <i class="fas fa-file-contract"></i> Syarat
+        </a>
+        <a href="#sitemap" class="nav-tab" role="tab" aria-selected="false">
+          <i class="fas fa-sitemap"></i> Sitemap
+        </a>
+      </nav>
+      <div class="reading-badge">
+        <i class="fas fa-clock"></i> ~5 menit baca
+      </div>
     </div>
-    <div class="github-section">
+
+    <!-- Main Content: Sidebar + Cards -->
+    <div class="content-wrap">
+      <!-- Table of Contents Sidebar -->
+      <aside class="toc" aria-label="Daftar isi">
+        <div class="toc-title">
+          <i class="fas fa-list"></i> Isi Halaman
+        </div>
+        <ul class="toc-list">
+          <li><span class="toc-section-label">Privasi</span></li>
+          <li><a href="#s-collect">Data Dikumpulkan</a></li>
+          <li><a href="#s-cookies">Cookies</a></li>
+          <li><a href="#s-formspree">Formulir Kontak</a></li>
+          <li><a href="#s-third">Pihak Ketiga</a></li>
+          <li><a href="#s-security">Keamanan</a></li>
+          <li><a href="#s-rights">Hak Anda</a></li>
+          <li><span class="toc-section-label">Syarat</span></li>
+          <li><a href="#s-license">Lisensi Musik</a></li>
+          <li><a href="#s-use">Penggunaan</a></li>
+          <li><a href="#s-disclaimer">Disclaimer</a></li>
+          <li><span class="toc-section-label">Sitemap</span></li>
+          <li><a href="#s-stats">Statistik</a></li>
+          <li><a href="#s-social">Media Sosial</a></li>
+          <li><a href="#s-contact">Kontak</a></li>
+        </ul>
+      </aside>
+
+      <!-- Cards Column -->
+      <div class="cards-col">
+        <!-- Kebijakan Privasi Card -->
+        <section class="card" id="privacy">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="card-header-text">
+              <div class="card-eyebrow">Dokumen Legal</div>
+              <h1 class="card-title">Kebijakan Privasi</h1>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-chip"><i class="fas fa-tag"></i> Versi 3.2</span>
+            <span class="meta-chip"><i class="fas fa-calendar"></i> 7 Februari 2026</span>
+            <button class="print-btn" onclick="window.print()"><i class="fas fa-print"></i> Cetak</button>
+          </div>
+
+          <div class="callout info">
+            <i class="fas fa-heart callout-icon"></i>
+            <div class="callout-text">
+              <strong>Komitmen Privasi</strong>
+              <p>Saya, Muhaajir, berkomitmen untuk melindungi privasi setiap pengunjung situs ini secara transparan.</p>
+            </div>
+          </div>
+
+          <h2 class="section-heading" id="s-collect"><span class="num">1</span> Informasi yang Dikumpulkan</h2>
+          <p>Situs ini dapat mengumpulkan data berikut saat Anda berinteraksi:</p>
+          <ul>
+            <li><strong>Data kontak:</strong> Nama dan alamat email yang Anda isi melalui formulir kontak.</li>
+            <li><strong>Data teknis:</strong> Alamat IP, jenis browser, dan halaman yang dikunjungi (via Google Analytics).</li>
+            <li><strong>Preferensi lokal:</strong> Pengaturan tema (dark/light mode) yang tersimpan di browser Anda.</li>
+          </ul>
+
+          <h2 class="section-heading" id="s-cookies"><span class="num">2</span> Penggunaan Cookies</h2>
+          <p>Situs menggunakan dua jenis cookies:</p>
+          <ul>
+            <li><strong>Cookies fungsional:</strong> Menyimpan preferensi seperti <code>darkMode</code> dan <code>lastTrack</code>.</li>
+            <li><strong>Cookies analitik:</strong> Google Analytics mengumpulkan data penggunaan secara anonim untuk meningkatkan pengalaman pengguna.</li>
+          </ul>
+
+          <div class="callout warning">
+            <i class="fas fa-cookie-bite callout-icon"></i>
+            <div class="callout-text">
+              <strong>Kontrol Cookie</strong>
+              <p>Anda dapat menolak cookies melalui banner di halaman ini. Cookies fungsional tidak mengumpulkan data pribadi.</p>
+            </div>
+          </div>
+
+          <h2 class="section-heading" id="s-formspree"><span class="num">3</span> Formulir Kontak (Formspree)</h2>
+          <p>Pesan yang dikirim melalui formulir kontak diproses oleh <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree</a>. Data disimpan maksimal <strong>30 hari</strong> sebelum dihapus secara otomatis dari server mereka.</p>
+
+          <h2 class="section-heading" id="s-third"><span class="num">4</span> Layanan Pihak Ketiga</h2>
+          <p>Situs ini menampilkan tautan atau konten dari layanan berikut. Interaksi Anda dengan layanan tersebut tunduk pada kebijakan privasi masing-masing:</p>
+          <ul>
+            <li>YouTube, GitHub Pages, TikTok, Instagram, SoundCloud</li>
+          </ul>
+
+          <h2 class="section-heading" id="s-security"><span class="num">5</span> Keamanan Data</h2>
+          <p>Langkah-langkah keamanan yang diterapkan:</p>
+          <ul>
+            <li>Seluruh koneksi dienkripsi dengan <strong>HTTPS/TLS</strong></li>
+            <li>Validasi input untuk mencegah injeksi berbahaya</li>
+            <li>Content Security Policy (CSP) aktif</li>
+            <li>Akses data dibatasi hanya untuk keperluan operasional</li>
+          </ul>
+
+          <div class="callout success">
+            <i class="fas fa-lock callout-icon"></i>
+            <div class="callout-text">
+              <strong>Tidak Ada Penjualan Data</strong>
+              <p>Data Anda tidak pernah dijual, disewakan, atau dibagi dengan pihak ketiga untuk keperluan pemasaran.</p>
+            </div>
+          </div>
+
+          <h2 class="section-heading" id="s-rights"><span class="num">6</span> Hak Anda (GDPR / UU PDP)</h2>
+          <p>Sesuai dengan regulasi perlindungan data, Anda berhak untuk:</p>
+          <ul>
+            <li><strong>Mengakses</strong> data pribadi yang kami simpan tentang Anda</li>
+            <li><strong>Menghapus</strong> data atas permintaan (right to erasure)</li>
+            <li><strong>Memperbaiki</strong> data yang tidak akurat</li>
+            <li><strong>Membatasi</strong> pemrosesan data dalam kondisi tertentu</li>
+          </ul>
+          <p>Untuk menggunakan hak-hak tersebut, hubungi melalui email di bagian Sitemap.</p>
+        </section>
+
+        <!-- Syarat & Ketentuan Card -->
+        <section class="card" id="terms">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+            <div class="card-header-text">
+              <div class="card-eyebrow">Dokumen Legal</div>
+              <h1 class="card-title">Syarat & Ketentuan</h1>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-chip"><i class="fas fa-tag"></i> Versi 3.2</span>
+            <span class="meta-chip"><i class="fas fa-calendar"></i> 7 Februari 2026</span>
+          </div>
+
+          <h2 class="section-heading" id="s-license"><span class="num">1</span> Lisensi Hak Cipta Musik</h2>
+          <p>Semua karya musik di situs ini adalah karya orisinal Muhaajir dan dilindungi oleh hak cipta. Berikut ketentuan penggunaannya:</p>
+
+          <div class="license-grid">
+            <div class="license-card">
+              <span class="license-type">🎧</span>
+              <strong>Personal</strong>
+              <span class="license-desc">Streaming & download untuk pribadi, non-komersial. Gratis.</span>
+            </div>
+            <div class="license-card">
+              <span class="license-type">💼</span>
+              <strong>Komersial</strong>
+              <span class="license-desc">Konten iklan, film, event. Perlu lisensi berbayar.</span>
+            </div>
+            <div class="license-card">
+              <span class="license-type">🎤</span>
+              <strong>Cover / Remix</strong>
+              <span class="license-desc">Diperbolehkan dengan kredit jelas ke Muhaajir.</span>
+            </div>
+          </div>
+
+          <h2 class="section-heading" id="s-use"><span class="num">2</span> Ketentuan Penggunaan Konten</h2>
+          <ul>
+            <li>Semua konten (audio, foto, teks, desain) dilindungi hak cipta © Muhaajir.</li>
+            <li>Dilarang mendistribusikan ulang, menjual, atau mengklaim kepemilikan tanpa izin tertulis.</li>
+            <li>Kredit wajib diberikan dalam format: <strong>"© Muhaajir – hajirmuhaajir.github.io"</strong></li>
+            <li>Penggunaan komersial tanpa lisensi merupakan pelanggaran hukum.</li>
+          </ul>
+
+          <h2 class="section-heading" id="s-disclaimer"><span class="num">3</span> Disclaimer & Batasan</h2>
+          <div class="callout warning">
+            <i class="fas fa-exclamation-triangle callout-icon"></i>
+            <div class="callout-text">
+              <strong>Perubahan Konten</strong>
+              <p>Muhaajir berhak memperbarui, mengubah, atau menghapus konten kapan saja tanpa pemberitahuan sebelumnya.</p>
+            </div>
+          </div>
+          <ul>
+            <li>Situs disediakan "sebagaimana adanya" tanpa jaminan ketersediaan penuh.</li>
+            <li>Tautan ke situs pihak ketiga tidak berarti endorsement dari Muhaajir.</li>
+            <li>Syarat dan ketentuan dapat diperbarui sewaktu-waktu. Versi terbaru selalu tersedia di halaman ini.</li>
+          </ul>
+        </section>
+
+        <!-- Sitemap Card -->
+        <section class="card" id="sitemap">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+            <div class="card-header-text">
+              <div class="card-eyebrow">Peta Situs</div>
+              <h1 class="card-title">Sitemap</h1>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <span class="meta-chip"><i class="fas fa-tag"></i> Versi 3.2</span>
+            <span class="meta-chip"><i class="fas fa-calendar"></i> 7 Februari 2026</span>
+            <span class="badge gold"><i class="fas fa-code"></i> XML Tersedia</span>
+          </div>
+
+          <!-- Stats -->
+          <h2 class="section-heading" id="s-stats"><span class="num">1</span> Statistik Konten</h2>
+          <div class="sitemap-grid">
+            <div class="sitemap-card">
+              <div class="sitemap-card-head">
+                <div class="sitemap-card-icon"><i class="fas fa-music"></i></div>
+                <h4>Musik</h4>
+              </div>
+              <div class="sitemap-stat">7</div>
+              <div class="sitemap-stat-label">Lagu Original</div>
+            </div>
+            <div class="sitemap-card">
+              <div class="sitemap-card-head">
+                <div class="sitemap-card-icon"><i class="fas fa-camera"></i></div>
+                <h4>Fotografi</h4>
+              </div>
+              <div class="sitemap-stat">3</div>
+              <div class="sitemap-stat-label">Foto Galeri</div>
+            </div>
+            <div class="sitemap-card">
+              <div class="sitemap-card-head">
+                <div class="sitemap-card-icon"><i class="fas fa-compact-disc"></i></div>
+                <h4>Album</h4>
+              </div>
+              <div class="sitemap-stat">2</div>
+              <div class="sitemap-stat-label">Album Dirilis</div>
+            </div>
+          </div>
+
+          <div class="album-chips">
+            <span class="album-chip">Fragmen Suara <span class="count">5</span></span>
+            <span class="album-chip">Resonansi <span class="count">7</span></span>
+          </div>
+
+          <!-- Social Media Table -->
+          <h2 class="section-heading" id="s-social"><span class="num">2</span> Media Sosial & Tautan</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Platform</th>
+                  <th>Handle / Profil</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="platform-icon pi-yt"><i class="fab fa-youtube"></i></span> YouTube</td>
+                  <td><a href="https://www.youtube.com/@hajirstein" target="_blank" rel="noopener noreferrer">@hajirstein</a></td>
+                </tr>
+                <tr>
+                  <td><span class="platform-icon pi-tt"><i class="fab fa-tiktok"></i></span> TikTok</td>
+                  <td><a href="https://www.tiktok.com/@muhaajir_muhaajir" target="_blank" rel="noopener noreferrer">@muhaajir_muhaajir</a></td>
+                </tr>
+                <tr>
+                  <td><span class="platform-icon pi-ig"><i class="fab fa-instagram"></i></span> Instagram</td>
+                  <td><a href="https://www.instagram.com/muhaajirere" target="_blank" rel="noopener noreferrer">@muhaajirere</a></td>
+                </tr>
+                <tr>
+                  <td><span class="platform-icon pi-sc"><i class="fab fa-soundcloud"></i></span> SoundCloud</td>
+                  <td><a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" target="_blank" rel="noopener noreferrer">Muhaajir</a></td>
+                </tr>
+                <tr>
+                  <td><span class="platform-icon pi-gh"><i class="fab fa-github"></i></span> GitHub</td>
+                  <td><a href="https://hajirmuhaajir.github.io" target="_blank" rel="noopener noreferrer">hajirmuhaajir</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Contact Emails -->
+          <h2 class="section-heading" id="s-contact"><span class="num">3</span> Kontak Email</h2>
+          <p>Klik email untuk menyalin ke clipboard:</p>
+          <div class="email-list">
+            <span class="email-chip" data-email="muhaajirmuhaajir9@hotmail.com" tabindex="0" role="button" aria-label="Salin email Hotmail">
+              <i class="fas fa-envelope"></i>
+              muhaajirmuhaajir9@hotmail.com
+              <span class="copy-hint"><i class="fas fa-copy"></i> salin</span>
+            </span>
+            <span class="email-chip" data-email="muhaajirmuhaajir9@gmail.com" tabindex="0" role="button" aria-label="Salin email Gmail">
+              <i class="fas fa-envelope"></i>
+              muhaajirmuhaajir9@gmail.com
+              <span class="copy-hint"><i class="fas fa-copy"></i> salin</span>
+            </span>
+            <span class="email-chip" data-email="muhaajirmuhaajir9@proton.me" tabindex="0" role="button" aria-label="Salin email Proton">
+              <i class="fas fa-shield-alt"></i>
+              muhaajirmuhaajir9@proton.me
+              <span class="copy-hint"><i class="fas fa-copy"></i> salin</span>
+            </span>
+          </div>
+        </section>
+      </div>
+      <!-- End cards-col -->
+    </div>
+    <!-- End content-wrap -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png" alt="Logo Muhaajir" class="footer-logo" loading="lazy" decoding="async">
+      <div class="footer-name">Muhaajir Official</div>
+      <div class="footer-tagline">Musik · Fotografi · Jakarta</div>
+
+      <div class="footer-links">
+        <a href="#privacy" class="footer-link"><i class="fas fa-shield-alt"></i> Privasi</a>
+        <a href="#terms" class="footer-link"><i class="fas fa-file-contract"></i> Syarat</a>
+        <a href="#sitemap" class="footer-link"><i class="fas fa-sitemap"></i> Sitemap</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.youtube.com/@hajirstein" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@muhaajir_muhaajir" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/muhaajirere" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+        <a href="https://github.com/hajirmuhaajir" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+
       <div class="github-links">
-        <a href="https://hajirmuhaajir.github.io" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> main-showcase <span class="license-tag">MIT</span></a>
-        <a href="https://hajirmuhaajir.github.io/footer-essentials" class="github-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> footer-essentials <span class="license-tag">CC0-1.0</span></a>
+        <a href="https://hajirmuhaajir.github.io" class="github-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> main-showcase <span class="license-tag">MIT</span>
+        </a>
+        <a href="https://hajirmuhaajir.github.io/footer-essentials" class="github-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> footer-essentials <span class="license-tag">CC0-1.0</span>
+        </a>
+        <a href="https://hajirmuhaajir.github.io/muhaajirvault/" class="github-link" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-archive"></i> muhaajirvault <span class="license-tag">CC0-1.0</span>
+        </a>
       </div>
-    </div>
-    <div class="copyright">© 2026 Muhaajir. All rights reserved.</div>
-  </footer>
 
-  <!-- Cookie Consent -->
-  <div class="cookie-consent" id="cookieConsent" aria-label="Pemberitahuan cookie">
-    <div class="cookie-content">
-      <div style="display:flex; align-items:center; gap:10px;"><i class="fas fa-cookie-bite" style="color:var(--gold);"></i> <strong>Kebijakan Cookie</strong></div>
-      <p>Website menggunakan cookies untuk meningkatkan pengalaman.</p>
-      <div class="cookie-buttons">
-        <button class="cookie-btn" onclick="acceptCookies()" aria-label="Setuju cookie">Setuju</button>
-        <button class="cookie-btn secondary" onclick="declineCookies()" aria-label="Tolak cookie">Tolak</button>
+      <div class="footer-divider"></div>
+      <div class="copyright">© 2026 Muhaajir. All rights reserved.</div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg"></span></div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner-head">
+        <i class="fas fa-cookie-bite"></i>
+        <strong>Kebijakan Cookie</strong>
+      </div>
+      <p>Situs ini menggunakan cookies untuk meningkatkan pengalaman dan analitik. Pilihan Anda akan diingat.</p>
+      <div class="cookie-btns">
+        <button class="cookie-btn primary" onclick="acceptCookies()">Setuju</button>
+        <button class="cookie-btn" onclick="declineCookies()">Tolak</button>
       </div>
     </div>
   </div>
-
-  <!-- Toast Notification -->
-  <div class="toast-message" id="toastMessage"></div>
-
-  <!-- Back to Top -->
-  <button id="backToTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+  <!-- End app-viewport -->
 
   <script>
-    (function() {
-      'use strict';
-      // Proteksi eval
-      Object.defineProperty(window, 'eval', { value: function() { console.warn('eval diblokir'); }, writable: false });
+  (function() {
+    'use strict';
 
-      // --- Sinkronisasi Dark Mode dengan localStorage ---
-      const themeToggle = document.getElementById('themeToggle'); // Tidak ada di halaman ini, tapi kita baca localStorage
-      function setThemeFromStorage() {
-        try {
-          if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-          } else {
-            document.body.classList.remove('dark-mode');
-          }
-        } catch (e) {
-          console.log('localStorage tidak tersedia');
+    // ----- THEME TOGGLE -----
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+
+    function applyTheme(dark) {
+      document.body.classList.toggle('dark', dark);
+      icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+      try {
+        localStorage.setItem('darkMode', dark ? 'enabled' : 'disabled');
+      } catch (e) {}
+    }
+
+    // Initial theme
+    try {
+      applyTheme(localStorage.getItem('darkMode') === 'enabled');
+    } catch (e) {
+      applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+
+    toggle.addEventListener('click', () => {
+      applyTheme(!document.body.classList.contains('dark'));
+    });
+
+    // ----- PROGRESS BAR -----
+    const bar = document.getElementById('progressBar');
+    const viewport = document.querySelector('.app-viewport');
+
+    if (viewport) {
+      viewport.addEventListener('scroll', () => {
+        const scrollPercent = (viewport.scrollTop / (viewport.scrollHeight - viewport.clientHeight)) * 100;
+        bar.style.width = scrollPercent + '%';
+      }, { passive: true });
+    }
+
+    // ----- TOAST NOTIFICATION -----
+    const toastEl = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(msg) {
+      if (!toastEl || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toastEl.classList.add('show');
+      setTimeout(() => toastEl.classList.remove('show'), 2200);
+    }
+
+    // ----- COPY EMAIL -----
+    async function copyEmail(text) {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
         }
+        showToast('Email disalin: ' + text);
+      } catch {
+        showToast('Gagal menyalin.');
       }
-      setThemeFromStorage();
+    }
 
-      // --- Scroll Progress Bar ---
-      const progressBar = document.getElementById('scrollProgressBar');
-      window.addEventListener('scroll', () => {
-        const winScroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        if (progressBar) progressBar.style.width = scrolled + '%';
-      });
-
-      // --- Toast Notification (pengganti alert) ---
-      const toast = document.getElementById('toastMessage');
-      function showToast(message) {
-        if (!toast) return;
-        toast.textContent = message;
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, 2000);
-      }
-
-      // --- Copy Email dengan Toast ---
-      async function copyEmail(text) {
-        try {
-          if (navigator.clipboard?.writeText) {
-            await navigator.clipboard.writeText(text);
-            showToast('Email disalin!');
-          } else {
-            // fallback
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            document.body.appendChild(ta);
-            ta.select();
-            document.execCommand('copy');
-            document.body.removeChild(ta);
-            showToast('Email disalin!');
-          }
-        } catch { showToast('Gagal menyalin.'); }
-      }
-      document.querySelectorAll('.contact-email[data-email]').forEach(el => {
-        el.addEventListener('click', (e) => {
+    document.querySelectorAll('.email-chip[data-email]').forEach(el => {
+      el.addEventListener('click', () => copyEmail(el.dataset.email));
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           copyEmail(el.dataset.email);
-        });
-        el.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            copyEmail(el.dataset.email);
-          }
-        });
-      });
-
-      // --- Tab navigation dengan hash & smooth scroll ---
-      const tabs = document.querySelectorAll('.nav-tab');
-      function setActiveTab() {
-        const hash = window.location.hash || '#privacy';
-        tabs.forEach(tab => {
-          tab.classList.remove('active');
-          tab.setAttribute('aria-selected', 'false');
-          if (tab.getAttribute('href') === hash) {
-            tab.classList.add('active');
-            tab.setAttribute('aria-selected', 'true');
-          }
-        });
-      }
-      window.addEventListener('hashchange', setActiveTab);
-      setActiveTab();
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = tab.getAttribute('href');
-          const target = document.querySelector(targetId);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            history.pushState(null, null, targetId);
-            setActiveTab();
-          }
-        });
-      });
-
-      // --- Back to Top ---
-      const backBtn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        if (backBtn) backBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
-      });
-      if (backBtn) {
-        backBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-      // --- Cookie Consent ---
-      window.acceptCookies = function() {
-        try { localStorage.setItem('cookiesAccepted', 'true'); } catch(e) {}
-        document.getElementById('cookieConsent').style.display = 'none';
-      };
-      window.declineCookies = function() {
-        try { localStorage.setItem('cookiesAccepted', 'false'); } catch(e) {}
-        document.getElementById('cookieConsent').style.display = 'none';
-      };
-      if (!localStorage.getItem('cookiesAccepted')) {
-        setTimeout(() => {
-          document.getElementById('cookieConsent').style.display = 'block';
-        }, 1500);
-      }
-
-      // --- Tambahan ARIA / aksesibilitas ---
-      document.querySelectorAll('.nav-tab').forEach(t => {
-        if (!t.getAttribute('aria-controls')) {
-          t.setAttribute('aria-controls', t.getAttribute('href').substring(1));
         }
       });
-    })();
+    });
+
+    // ----- NAVIGATION TABS -----
+    const tabs = document.querySelectorAll('.nav-tab');
+
+    function updateTabs() {
+      const hash = window.location.hash || '#privacy';
+      tabs.forEach(t => {
+        const href = t.getAttribute('href');
+        const active = href === hash;
+        t.classList.toggle('active', active);
+        t.setAttribute('aria-selected', String(active));
+      });
+    }
+
+    window.addEventListener('hashchange', updateTabs);
+    updateTabs();
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = tab.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target && viewport) {
+          const targetPosition = target.offsetTop;
+          viewport.scrollTo({
+            top: targetPosition - 80,
+            behavior: 'smooth'
+          });
+          window.history.pushState(null, null, targetId);
+          updateTabs();
+        }
+      });
+    });
+
+    // ----- TABLE OF CONTENTS ACTIVE STATE -----
+    const tocLinks = document.querySelectorAll('.toc-list a[href^="#"]');
+    
+    if (viewport && tocLinks.length) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active-toc'));
+            const link = document.querySelector('.toc-list a[href="#' + entry.target.id + '"]');
+            if (link) link.classList.add('active-toc');
+          }
+        });
+      }, {
+        root: viewport,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('.section-heading[id], .card[id]').forEach(el => {
+        if (el) observer.observe(el);
+      });
+    }
+
+    // ----- BACK TO TOP -----
+    const backBtn = document.getElementById('backToTop');
+
+    if (viewport && backBtn) {
+      viewport.addEventListener('scroll', () => {
+        backBtn.style.display = viewport.scrollTop > 400 ? 'flex' : 'none';
+      }, { passive: true });
+
+      backBtn.addEventListener('click', () => {
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // ----- COOKIE CONSENT -----
+    window.acceptCookies = function() {
+      try {
+        localStorage.setItem('cookiesAccepted', 'true');
+      } catch (e) {}
+      const banner = document.getElementById('cookieBanner');
+      if (banner) banner.style.display = 'none';
+      showToast('Preferensi cookie disimpan.');
+    };
+
+    window.declineCookies = function() {
+      try {
+        localStorage.setItem('cookiesAccepted', 'false');
+      } catch (e) {}
+      const banner = document.getElementById('cookieBanner');
+      if (banner) banner.style.display = 'none';
+    };
+
+    try {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        setTimeout(() => {
+          const banner = document.getElementById('cookieBanner');
+          if (banner) banner.style.display = 'block';
+        }, 1800);
+      }
+    } catch (e) {
+      setTimeout(() => {
+        const banner = document.getElementById('cookieBanner');
+        if (banner) banner.style.display = 'block';
+      }, 1800);
+    }
+
+    // ----- FIX FOR MOBILE 100VH ISSUE -----
+    function setViewportHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+
+    window.addEventListener('resize', setViewportHeight);
+    setViewportHeight();
+  })();
   </script>
-  <!-- Watermark (DIHAPUS sesuai instruksi) -->
 </body>
 </html>
