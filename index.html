@@ -618,7 +618,7 @@
       min-width: 200px;
     }
 
-    .card-eyebrow {
+    .section-eyebrow {
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2px;
@@ -1631,13 +1631,8 @@
           <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
             <i class="fas fa-moon" id="themeIcon"></i>
           </button>
-          <a href="https://hajirmuhaajir.github.io/main-showcase/" class="back-home" rel="noopener noreferrer">
-            <i class="fas fa-arrow-left"></i>
-            <span>Kembali</span>
-          </a>
-        </div>
-      </div>
-    </header>
+          </div> <!-- Perbaiki: tutup header-actions -->
+    </header> <!-- header ditutup dengan benar -->
 
     <!-- Hero -->
     <section class="hero">
@@ -1700,7 +1695,7 @@
           <div class="card-header">
             <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
             <div class="card-header-text">
-              <div class="card-eyebrow">Dokumen Legal</div>
+              <div class="section-eyebrow">Dokumen Legal</div>
               <h1 class="card-title">Kebijakan Privasi</h1>
             </div>
           </div>
@@ -1784,7 +1779,7 @@
           <div class="card-header">
             <div class="card-icon"><i class="fas fa-file-contract"></i></div>
             <div class="card-header-text">
-              <div class="card-eyebrow">Dokumen Legal</div>
+              <div class="section-eyebrow">Dokumen Legal</div>
               <h1 class="card-title">Syarat & Ketentuan</h1>
             </div>
           </div>
@@ -1843,7 +1838,7 @@
           <div class="card-header">
             <div class="card-icon"><i class="fas fa-sitemap"></i></div>
             <div class="card-header-text">
-              <div class="card-eyebrow">Peta Situs</div>
+              <div class="section-eyebrow">Peta Situs</div>
               <h1 class="card-title">Sitemap</h1>
             </div>
           </div>
@@ -1953,7 +1948,7 @@
     <footer class="footer">
       <img src="https://i.postimg.cc/Kvg50f5n/IMG-20250812-164118-putih.png" alt="Logo Muhaajir" class="footer-logo" loading="lazy" decoding="async">
       <div class="footer-name">Muhaajir Official</div>
-      <div class="footer-tagline">Musik · Fotografi · Jakarta</div>
+      <div class="footer-tagline">Musik · Fotografi</div>
 
       <div class="footer-links">
         <a href="#privacy" class="footer-link"><i class="fas fa-shield-alt"></i> Privasi</a>
@@ -1967,18 +1962,6 @@
         <a href="https://www.instagram.com/muhaajirere" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
         <a href="https://github.com/hajirmuhaajir" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
-
-      <div class="github-links">
-        <a href="https://hajirmuhaajir.github.io" class="github-link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i> main-showcase <span class="license-tag">MIT</span>
-        </a>
-        <a href="https://hajirmuhaajir.github.io/footer-essentials" class="github-link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i> footer-essentials <span class="license-tag">CC0-1.0</span>
-        </a>
-        <a href="https://hajirmuhaajir.github.io/muhaajirvault/" class="github-link" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-archive"></i> muhaajirvault <span class="license-tag">CC0-1.0</span>
-        </a>
       </div>
 
       <div class="footer-divider"></div>
@@ -2022,10 +2005,11 @@
       } catch (e) {}
     }
 
-    // Initial theme
-    try {
-      applyTheme(localStorage.getItem('darkMode') === 'enabled');
-    } catch (e) {
+    // Initial theme: prefer saved, else system preference
+    const savedTheme = localStorage.getItem('darkMode');
+    if (savedTheme) {
+      applyTheme(savedTheme === 'enabled');
+    } else {
       applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
 
@@ -2187,15 +2171,6 @@
         if (banner) banner.style.display = 'block';
       }, 1800);
     }
-
-    // ----- FIX FOR MOBILE 100VH ISSUE -----
-    function setViewportHeight() {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    }
-
-    window.addEventListener('resize', setViewportHeight);
-    setViewportHeight();
   })();
   </script>
 </body>
