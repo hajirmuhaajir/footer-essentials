@@ -8,17 +8,15 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), autoplay=(self)">
-
+  
   <!-- SEO Meta -->
-  <meta name="description" content="Kebijakan Privasi, Syarat & Ketentuan, dan Sitemap Muhaajir Official – Musik, Fotografi & Tools Digital. Versi 3.6 (10 Mei 2026)">
-  <meta name="keywords" content="Muhaajir, privasi, syarat ketentuan, sitemap, kebijakan privasi, lisensi musik, tools digital, footer essentials">
+  <meta name="description" content="Kebijakan Privasi, Syarat & Ketentuan, dan Sitemap Muhaajir Official – Musik, Fotografi & Tools Digital. Versi 3.6">
   <meta name="author" content="Muhaajir">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Legal & Sitemap v3.6 | Muhaajir Official">
-  <meta property="og:description" content="Dokumen resmi Muhaajir Official – Kebijakan Privasi, Syarat & Ketentuan, Sitemap. Versi 3.6 (10 Mei 2026)">
+  <meta property="og:title" content="Legal & Sitemap | Muhaajir Official">
+  <meta property="og:description" content="Dokumen resmi Muhaajir Official – Kebijakan Privasi, Syarat & Ketentuan, Sitemap.">
   <meta property="og:image" content="https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp">
   <meta property="og:url" content="https://hajirmuhaajir.github.io">
 
@@ -29,55 +27,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Legal & Sitemap v3.6 - Muhaajir Official",
-    "url": "https://hajirmuhaajir.github.io",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Muhaajir Official",
-      "url": "https://hajirmuhaajir.github.io"
-    },
-    "about": {
-      "@type": "Organization",
-      "name": "Muhaajir Official",
-      "logo": "https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp",
-      "sameAs": [
-        "https://www.youtube.com/@hajirstein",
-        "https://www.tiktok.com/@muhaajir_muhaajir",
-        "https://www.instagram.com/muhaajirere",
-        "https://on.soundcloud.com/m65TNUx3XarndC67jO",
-        "https://github.com/hajirmuhaajir"
-      ]
-    }
-  }
-  </script>
-
-  <title>Legal & Sitemap v3.6 | Muhaajir Official</title>
+  <title>Legal & Sitemap | Muhaajir Official</title>
 
   <style>
-    /* ============================= CSS VARIABLES ============================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --bg-primary: #F8FAFC;
       --bg-surface: #FFFFFF;
       --text-primary: #0F172A;
       --text-secondary: #475569;
       --text-muted: #64748B;
-      --accent-primary: #2563EB;
+      --accent: #2563EB;
       --accent-hover: #1D4ED8;
-      --border-default: rgba(15, 23, 42, 0.12);
-      --border-light: rgba(15, 23, 42, 0.06);
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --border: rgba(15, 23, 42, 0.12);
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
     }
 
     [data-theme="dark"] {
@@ -86,34 +54,17 @@
       --text-primary: #F8FAFC;
       --text-secondary: #94A3B8;
       --text-muted: #64748B;
-      --accent-primary: #3B82F6;
+      --accent: #3B82F6;
       --accent-hover: #60A5FA;
-      --border-default: rgba(248, 250, 252, 0.1);
-      --border-light: rgba(248, 250, 252, 0.05);
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.6);
-    }
-
-    /* ============================= RESET & BASE ============================= */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
+      --border: rgba(248, 250, 252, 0.1);
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.6;
-      transition: var(--transition);
+      transition: all 0.2s ease;
     }
 
     .container {
@@ -122,54 +73,49 @@
       padding: 0 24px;
     }
 
-    /* ============================= SKIP LINK (A11Y) ============================= */
+    /* skip link */
     .skip-link {
       position: absolute;
       top: -40px;
       left: 0;
-      background: var(--accent-primary);
+      background: var(--accent);
       color: white;
       padding: 8px 16px;
-      text-decoration: none;
-      border-radius: var(--radius-sm);
+      border-radius: 8px;
       z-index: 1001;
       transition: top 0.2s;
-      font-weight: 500;
     }
-    .skip-link:focus {
-      top: 16px;
-      left: 16px;
-    }
+    .skip-link:focus { top: 16px; left: 16px; }
 
-    /* ============================= PROGRESS BAR ============================= */
+    /* progress bar */
     .progress-bar {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+      background: linear-gradient(90deg, var(--accent), var(--accent-hover));
       transform-origin: left;
-      transition: transform 0.1s linear;
+      transform: scaleX(0);
       z-index: 1000;
     }
 
-    /* ============================= HEADER ============================= */
+    /* header */
     .header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255,255,255,0.95);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-default);
+      border-bottom: 1px solid var(--border);
       z-index: 999;
     }
     [data-theme="dark"] .header {
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(15,23,42,0.95);
     }
     .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 16px 0;
       gap: 20px;
     }
@@ -182,31 +128,19 @@
       font-size: 1.25rem;
       color: var(--text-primary);
     }
-    .logo-img-wrap {
+    .logo img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: #0F172A;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .logo img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
       object-fit: cover;
-    }
-    [data-theme="dark"] .logo-img-wrap {
-      background: transparent;
     }
     .header-actions {
       display: flex;
       gap: 12px;
     }
-    .lang-toggle, .print-pdf-btn {
+    .icon-btn {
       background: var(--bg-surface);
-      border: 1px solid var(--border-default);
+      border: 1px solid var(--border);
       border-radius: 50%;
       width: 48px;
       height: 48px;
@@ -214,45 +148,41 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: var(--transition);
-      font-weight: 700;
-      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
       color: var(--text-primary);
+      font-weight: 700;
     }
-    .lang-toggle:hover, .print-pdf-btn:hover {
-      background: var(--accent-primary);
+    .icon-btn:hover {
+      background: var(--accent);
       color: white;
       transform: scale(1.05);
-      border-color: var(--accent-primary);
     }
 
-    /* ============================= HERO ============================= */
+    /* hero */
     .hero {
       text-align: center;
       padding: 80px 0 48px;
     }
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
-      line-height: 1.2;
-      background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+      background: linear-gradient(135deg, var(--text-primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
     .hero-subtitle {
       color: var(--text-secondary);
-      font-size: 1.2rem;
-      margin-top: 16px;
+      font-size: 1.1rem;
+      margin-top: 12px;
     }
     .version-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       margin-top: 20px;
-      padding: 8px 16px;
+      padding: 8px 20px;
       background: var(--bg-surface);
-      border: 1px solid var(--border-default);
+      border: 1px solid var(--border);
       border-radius: 40px;
       font-size: 0.85rem;
     }
@@ -260,793 +190,521 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      background: rgba(34,197,94,0.15);
       padding: 4px 12px;
-      background: rgba(34, 197, 94, 0.15);
       border-radius: 20px;
       color: #22c55e;
       font-size: 0.75rem;
       font-weight: 600;
     }
-    .status-badge .dot {
+    .dot {
       width: 6px;
       height: 6px;
       background: #22c55e;
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
 
-    /* ============================= NAV TABS ============================= */
+    /* tabs */
     .nav-tabs {
       display: flex;
+      gap: 8px;
       background: var(--bg-surface);
-      border: 1px solid var(--border-default);
-      border-radius: var(--radius-lg);
-      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 6px;
       margin: 40px 0;
-      gap: 4px;
     }
     .nav-tab {
       flex: 1;
-      padding: 14px 24px;
+      padding: 12px 20px;
       background: transparent;
       border: none;
       color: var(--text-secondary);
       font-weight: 600;
-      font-size: 0.95rem;
       cursor: pointer;
-      border-radius: var(--radius-lg);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: var(--transition);
-      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
+      font-family: inherit;
     }
     .nav-tab.active, .nav-tab:hover {
-      background: var(--accent-primary);
+      background: var(--accent);
       color: white;
     }
 
-    /* ============================= CARDS & CONTENT ============================= */
+    /* content */
     .section {
       display: none;
-      animation: fadeInUp 0.3s ease;
+      animation: fadeIn 0.3s ease;
     }
-    .section.active {
-      display: block;
-    }
+    .section.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
     .card {
       background: var(--bg-surface);
-      border: 1px solid var(--border-default);
-      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
       padding: 40px;
-      margin: 40px 0;
-      transition: var(--transition);
+      margin: 32px 0;
+      transition: 0.2s;
     }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .card-header {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       margin-bottom: 32px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border-default);
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
     }
     .card-icon {
       width: 60px;
       height: 60px;
+      background: var(--accent);
       border-radius: 20px;
-      background: var(--accent-primary);
-      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
+      font-size: 1.8rem;
+      color: white;
     }
-    .card-title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .card-version {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 32px 0 16px;
-      color: var(--text-primary);
-    }
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 28px 0 12px;
-      color: var(--text-primary);
-    }
-    p {
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-    ul, ol {
-      padding-left: 28px;
-      margin-bottom: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-      color: var(--text-secondary);
-    }
-    a {
-      color: var(--accent-primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
+    h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; }
+    h3 { font-size: 1.3rem; font-weight: 600; margin: 28px 0 12px; }
+    p, li { color: var(--text-secondary); margin-bottom: 12px; }
+    ul, ol { padding-left: 28px; margin-bottom: 20px; }
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    .credit-box {
+      background: var(--bg-primary);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      font-family: monospace;
+      margin: 16px 0;
+      border-radius: 12px;
     }
 
-    /* ============================= GRID & CARDS ============================= */
+    /* sitemap grid */
     .sitemap-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
       margin: 32px 0;
     }
     .sitemap-card {
       background: var(--bg-surface);
-      border: 2px solid var(--border-default);
-      border-radius: var(--radius-lg);
+      border: 2px solid var(--border);
+      border-radius: 20px;
       padding: 28px;
       text-align: center;
-      transition: var(--transition);
+      transition: 0.2s;
+      display: block;
+      color: inherit;
     }
     .sitemap-card:hover {
-      border-color: var(--accent-primary);
+      border-color: var(--accent);
       transform: translateY(-4px);
+      text-decoration: none;
     }
-    .sitemap-card i {
-      font-size: 2rem;
-      color: var(--accent-primary);
-      margin-bottom: 16px;
-    }
-    .sitemap-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-    .credit-box {
-      background: var(--bg-primary);
-      border: 1px solid var(--border-default);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      font-family: 'SF Mono', Monaco, monospace;
-      font-size: 0.9rem;
-      margin: 16px 0;
-      text-align: center;
-    }
+    .sitemap-card i { font-size: 2rem; color: var(--accent); margin-bottom: 12px; }
     .changelog {
       background: var(--bg-primary);
-      border-left: 3px solid var(--accent-primary);
-      padding: 20px;
-      margin: 24px 0;
-      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent);
+      padding: 24px;
+      border-radius: 16px;
+      margin-top: 32px;
     }
 
-    /* ============================= BACK TO TOP ============================= */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 50px;
-      height: 50px;
-      background: var(--accent-primary);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 998;
-      box-shadow: var(--shadow-lg);
-    }
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    .back-to-top:hover {
-      transform: translateY(-4px);
-      background: var(--accent-hover);
-    }
-
-    /* ============================= FOOTER - FULL VERSION ============================= */
-    .footer-full {
+    /* footer full */
+    .footer {
       background: var(--bg-surface);
-      border-top: 1px solid var(--border-default);
+      border-top: 1px solid var(--border);
       padding: 60px 0 32px;
       margin-top: 80px;
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 40px;
       margin-bottom: 40px;
     }
-    .footer-col h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: var(--text-primary);
-    }
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer-col ul li {
-      margin-bottom: 12px;
-    }
-    .footer-col ul li a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    .footer-col ul li a:hover {
-      color: var(--accent-primary);
-      text-decoration: none;
-    }
-    .social-links {
-      display: flex;
-      gap: 12px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
+    .footer-col h4 { font-size: 1rem; font-weight: 600; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: var(--text-muted); font-size: 0.9rem; }
+    .social-links { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
     .social-link {
       width: 42px;
       height: 42px;
       border-radius: 50%;
       background: var(--bg-primary);
-      border: 1px solid var(--border-default);
+      border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--text-secondary);
-      transition: var(--transition);
-      font-size: 1.1rem;
+      transition: 0.2s;
     }
     .social-link:hover {
-      background: var(--accent-primary);
+      background: var(--accent);
       color: white;
       transform: translateY(-3px);
-      border-color: var(--accent-primary);
     }
     .footer-bottom {
       text-align: center;
       padding-top: 32px;
-      border-top: 1px solid var(--border-default);
+      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--text-muted);
     }
-    .footer-disclaimer {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      margin-top: 12px;
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s;
+      z-index: 998;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+    .back-to-top.show { opacity: 1; visibility: visible; }
+    .back-to-top:hover { transform: translateY(-4px); background: var(--accent-hover); }
 
-    /* ============================= FOOTER - COMPACT VERSION ============================= */
-    .footer-compact {
-      background: var(--bg-surface);
-      border-top: 1px solid var(--border-default);
-      padding: 24px 0;
-      margin-top: 80px;
-    }
-    .footer-compact .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .footer-compact .copyright {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    .footer-compact .social-links {
-      margin: 0;
-    }
-    @media (max-width: 768px) {
-      .footer-compact .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    /* ============================= RESPONSIVE ============================= */
     @media (max-width: 768px) {
       .container { padding: 0 16px; }
       .nav-tabs { flex-direction: column; }
-      .nav-tab { padding: 12px 16px; }
-      .card { padding: 24px; margin: 24px 0; }
+      .card { padding: 24px; }
       .card-header { flex-direction: column; text-align: center; gap: 12px; }
-      .sitemap-grid { grid-template-columns: 1fr; }
-      .hero { padding: 48px 0 32px; }
-      .hero h1 { font-size: 1.75rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .hero { padding: 40px 0 24px; }
+      .footer-grid { gap: 32px; text-align: center; }
       .social-links { justify-content: center; }
-      .back-to-top { bottom: 20px; right: 20px; width: 44px; height: 44px; }
     }
-
-    @media (max-width: 480px) {
-      .logo span { display: none; }
-      .lang-toggle, .print-pdf-btn { width: 42px; height: 42px; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media print {
-      .back-to-top, .nav-tabs, .lang-toggle, .print-pdf-btn, .progress-bar, .skip-link, .header-actions { display: none; }
-      .card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; }
-      body { background: white; color: black; }
-      a { color: black; text-decoration: underline; }
+      .progress-bar, .back-to-top, .nav-tabs, .icon-btn, .skip-link, .header-actions { display: none; }
+      .card { break-inside: avoid; border: 1px solid #ccc; }
     }
   </style>
 </head>
 <body data-theme="dark">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="progress-bar" id="progressBar"></div>
 
-  <!-- SKIP TO MAIN CONTENT -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Progress Bar -->
-  <div class="progress-bar" id="progressBar"></div>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="https://hajirmuhaajir.github.io" class="logo">
-          <span class="logo-img-wrap">
-            <img src="https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp" alt="Logo Muhaajir Official" width="36" height="36">
-          </span>
-          <span>Muhaajir</span>
-        </a>
-        <div class="header-actions">
-          <button class="lang-toggle" id="langToggle" aria-label="Ganti bahasa">EN</button>
-          <button class="print-pdf-btn" id="printPDFBtn" aria-label="Cetak halaman sebagai PDF">
-            <i class="fas fa-print"></i>
-          </button>
-        </div>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://hajirmuhaajir.github.io" class="logo">
+        <img src="https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp" alt="Logo" width="40" height="40">
+        <span>Muhaajir</span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" id="langToggle" aria-label="Ganti bahasa">EN</button>
+        <button class="icon-btn" id="printPDFBtn" aria-label="Cetak PDF"><i class="fas fa-print"></i></button>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- MAIN CONTENT -->
-  <main id="main-content">
-    <section class="hero">
-      <div class="container">
-        <h1 data-i18n="hero.title">Legal &amp; Sitemap</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Dokumen resmi Muhaajir Official – Musik · Fotografi · Tools Digital</p>
-        <div class="version-badge">
-          <span data-i18n="hero.version">Versi 3.6 — 10 Mei 2026</span>
-          <span class="status-badge">
-            <span class="dot"></span> Stable
-          </span>
-        </div>
+<main id="main-content">
+  <div class="hero">
+    <div class="container">
+      <h1 data-i18n="hero.title">Legal &amp; Sitemap</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Dokumen resmi Muhaajir Official – Musik · Fotografi · Tools Digital</p>
+      <div class="version-badge">
+        <span data-i18n="hero.version">Versi 3.6 — 10 Mei 2026</span>
+        <span class="status-badge"><span class="dot"></span> Stable</span>
       </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab active" data-tab="privacy" role="tab"><i class="fas fa-shield-alt"></i> <span data-i18n="nav.privacy">Privasi</span></button>
+      <button class="nav-tab" data-tab="terms" role="tab"><i class="fas fa-file-contract"></i> <span data-i18n="nav.terms">Syarat & Ketentuan</span></button>
+      <button class="nav-tab" data-tab="sitemap" role="tab"><i class="fas fa-sitemap"></i> <span data-i18n="nav.sitemap">Sitemap</span></button>
+    </div>
+
+    <!-- Privacy Policy -->
+    <section id="privacy" class="section active">
+      <article class="card">
+        <div class="card-header"><div class="card-icon"><i class="fas fa-shield-alt"></i></div><div><h2 data-i18n="privacy.title">Kebijakan Privasi</h2><p data-i18n="privacy.version">Versi 3.6 — 10 Mei 2026</p></div></div>
+        <h3 data-i18n="privacy.commitment.title">Komitmen Privasi</h3>
+        <p data-i18n="privacy.commitment.desc">Saya, Muhaajir, berkomitmen melindungi privasi Anda dengan transparan. Data Anda tidak pernah dijual, disewakan, atau dibagikan untuk keperluan pemasaran.</p>
+        <h3 data-i18n="privacy.data.title">1. Data yang Dikumpulkan</h3>
+        <p data-i18n="privacy.data.desc">Informasi sukarela (nama, pesan) melalui formulir kontak. Data teknis anonim (IP, browser) via Google Analytics. Preferensi lokal (bahasa, tema) disimpan di browser Anda. Tools digital tidak mengirim data pribadi ke server.</p>
+        <h3 data-i18n="privacy.cookies.title">2. Cookies & Pihak Ketiga</h3>
+        <p data-i18n="privacy.cookies.desc">Cookies fungsional untuk menyimpan preferensi. Google Analytics (anonim). Formulir diproses oleh Formspree (data dihapus maksimal 30 hari). Link eksternal tunduk pada kebijakan masing-masing.</p>
+        <h3 data-i18n="privacy.security.title">3. Keamanan Data</h3>
+        <p data-i18n="privacy.security.desc">Seluruh situs menggunakan HTTPS/TLS. Content Security Policy (CSP) aktif. Validasi input dan akses data sangat dibatasi.</p>
+        <h3 data-i18n="privacy.rights.title">4. Hak Anda</h3>
+        <p data-i18n="privacy.rights.desc">Anda berhak mengakses, memperbaiki, atau menghapus data pribadi Anda. Untuk menggunakan hak tersebut, hubungi melalui formulir kontak di halaman utama.</p>
+      </article>
     </section>
 
-    <div class="container">
-      <!-- Navigation Tabs -->
-      <nav class="nav-tabs" role="tablist">
-        <button class="nav-tab active" data-tab="privacy" role="tab">
-          <i class="fas fa-shield-alt"></i>
-          <span data-i18n="nav.privacy">Privasi</span>
-        </button>
-        <button class="nav-tab" data-tab="terms" role="tab">
-          <i class="fas fa-file-contract"></i>
-          <span data-i18n="nav.terms">Syarat &amp; Ketentuan</span>
-        </button>
-        <button class="nav-tab" data-tab="sitemap" role="tab">
-          <i class="fas fa-sitemap"></i>
-          <span data-i18n="nav.sitemap">Sitemap</span>
-        </button>
-      </nav>
+    <!-- Terms & Conditions -->
+    <section id="terms" class="section">
+      <article class="card">
+        <div class="card-header"><div class="card-icon"><i class="fas fa-file-contract"></i></div><div><h2 data-i18n="terms.title">Syarat & Ketentuan</h2><p data-i18n="terms.version">Versi 3.6 — 10 Mei 2026</p></div></div>
+        <p data-i18n="terms.intro">Dengan mengakses situs ini, Anda dianggap menyetujui ketentuan berikut:</p>
+        <h3 data-i18n="terms.ip.title">1. Kekayaan Intelektual & Lisensi</h3>
+        <p data-i18n="terms.ip.desc">Semua karya musik (12 lagu original), foto, teks, desain, dan tools digital adalah milik penuh Muhaajir. Penggunaan personal gratis. Penggunaan komersial wajib lisensi. Cover / remix diperbolehkan dengan mencantumkan kredit: "© Muhaajir".</p>
+        <div class="credit-box">© Muhaajir</div>
+        <h3 data-i18n="terms.prohibited.title">2. Larangan</h3>
+        <p data-i18n="terms.prohibited.desc">Dilarang mendistribusikan ulang, menjual, atau mengklaim kepemilikan konten tanpa izin tertulis. Dilarang scraping otomatis atau upaya meretas sistem.</p>
+        <h3 data-i18n="terms.disclaimer.title">3. Batasan Tanggung Jawab</h3>
+        <p data-i18n="terms.disclaimer.desc">Situs dan konten disediakan "sebagaimana adanya". Kami tidak bertanggung jawab atas kegagalan unduhan atau dampak teknis dari penggunaan tools. Tautan eksternal bukan endorsement.</p>
+        <h3 data-i18n="terms.law.title">4. Hukum Berlaku</h3>
+        <p data-i18n="terms.law.desc">Setiap sengketa diselesaikan di bawah hukum Indonesia, domisili Bogor.</p>
+      </article>
+    </section>
 
-      <!-- Privacy Policy Section -->
-      <section id="privacy" class="section active">
-        <article class="card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <div>
-              <h2 class="card-title">Kebijakan Privasi</h2>
-              <p class="card-version">Versi 3.6 — 10 Mei 2026</p>
-            </div>
-          </div>
-
-          <h3>Komitmen Privasi</h3>
-          <p>Saya, Muhaajir, berkomitmen melindungi privasi Anda dengan transparan. Data Anda tidak pernah dijual, disewakan, atau dibagikan untuk keperluan pemasaran.</p>
-
-          <h3>1. Data yang Dikumpulkan</h3>
-          <p>1.1 Informasi sukarela: Nama asli (min. 4 huruf) dan pesan jelas (min. 20 karakter) yang Anda kirim melalui formulir kontak Formspree.<br>
-          1.2 Data teknis: Alamat IP, jenis browser, dan halaman yang dikunjungi (dicatat secara anonim melalui Google Analytics).<br>
-          1.3 Preferensi lokal: Pengaturan bahasa (ID/EN) dan preferensi tools yang disimpan di browser Anda.<br>
-          1.4 Data sesi tools: Penggunaan Hajirsync, Muhaajir Delta, Muhaajir Scrub, atau Mehaajir Vault hanya menyimpan preferensi lokal.</p>
-
-          <h3>2. Penggunaan Cookies &amp; Pihak Ketiga</h3>
-          <p>Cookies fungsional: Menyimpan preferensi pengguna (tidak mengumpulkan data pribadi).<br>
-          Cookies analitik: Google Analytics untuk meningkatkan pengalaman situs (anonim).<br>
-          Formulir kontak diproses oleh Formspree (data dihapus otomatis setelah maksimal 30 hari).<br>
-          Penyimpanan aset musik: Dropbox dan Google Drive.<br>
-          Link eksternal (YouTube, TikTok, Instagram, SoundCloud, GitHub) tunduk pada kebijakan privasi masing-masing.</p>
-
-          <h3>3. Keamanan Data</h3>
-          <p>Seluruh situs menggunakan koneksi HTTPS/TLS.<br>
-          Content Security Policy (CSP) aktif.<br>
-          Validasi input untuk mencegah serangan.<br>
-          Akses data sangat dibatasi.</p>
-
-          <h3>4. Hak Anda</h3>
-          <p>Anda berhak untuk:<br>
-          • Mengakses data pribadi yang tersimpan tentang Anda.<br>
-          • Meminta perbaikan atau penghapusan data (right to erasure).<br>
-          • Membatasi pemrosesan data.<br><br>
-          Untuk menggunakan hak tersebut, silakan hubungi melalui <strong>formulir kontak Formspree</strong> di halaman utama.</p>
-        </article>
-      </section>
-
-      <!-- Terms & Conditions Section -->
-      <section id="terms" class="section">
-        <article class="card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-file-contract"></i>
-            </div>
-            <div>
-              <h2 class="card-title">Syarat &amp; Ketentuan</h2>
-              <p class="card-version">Versi 3.6 — 10 Mei 2026</p>
-            </div>
-          </div>
-
-          <p>Dengan mengakses situs ini, Anda dianggap menyetujui ketentuan berikut:</p>
-
-          <h3>1. Kekayaan Intelektual &amp; Lisensi</h3>
-          <p>1.1 Semua karya musik (12 lagu original: 5 Fragmen Suara + 7 Resonansi Dalam Diam), foto, teks, desain, dan tools digital adalah milik penuh Muhaajir dan dilindungi hak cipta.<br>
-          1.2 Penggunaan Personal: Streaming, download, dan mendengarkan untuk keperluan pribadi &amp; non-komersial gratis.<br>
-          1.3 Penggunaan Komersial (iklan, film, event, dll): Wajib mendapatkan lisensi berbayar.<br>
-          1.4 Cover / Remix: Diperbolehkan dengan mencantumkan kredit jelas:</p>
-          <div class="credit-box">"© Muhaajir"</div>
-          <p>1.5 Tools digital (Hajirsync, Muhaajir Delta, Muhaajir Scrub, Mehaajir Vault) adalah properti intelektual Muhaajir. Penggunaan komersial memerlukan izin.</p>
-
-          <h3>2. Larangan</h3>
-          <p>Dilarang mendistribusikan ulang, menjual, atau mengklaim kepemilikan konten tanpa izin tertulis.<br>
-          Dilarang melakukan scraping otomatis atau upaya meretas sistem.<br>
-          Kredit wajib diberikan saat menggunakan foto atau musik.</p>
-
-          <h3>3. Batasan Tanggung Jawab (Disclaimer)</h3>
-          <p>Situs dan konten disediakan "sebagaimana adanya" tanpa jaminan ketersediaan atau bebas kesalahan.<br>
-          Kami tidak bertanggung jawab atas kegagalan unduhan di Dropbox/Google Drive atau dampak teknis dari penggunaan tools.<br>
-          Tautan ke platform eksternal bukan merupakan endorsement.<br>
-          Muhaajir berhak mengubah atau menghapus konten kapan saja tanpa pemberitahuan sebelumnya.</p>
-
-          <h3>4. Hukum Berlaku</h3>
-          <p>Setiap sengketa akan diselesaikan di bawah hukum Indonesia, dengan domisili hukum di Bogor, Indonesia.</p>
-        </article>
-      </section>
-
-      <!-- Sitemap Section -->
-      <section id="sitemap" class="section">
-        <article class="card">
-          <div class="card-header">
-            <div class="card-icon">
-              <i class="fas fa-sitemap"></i>
-            </div>
-            <div>
-              <h2 class="card-title">Sitemap</h2>
-              <p class="card-version">Navigasi lengkap situs Muhaajir Official – Versi 3.6</p>
-            </div>
-          </div>
-
-          <div class="sitemap-grid">
-            <a href="https://hajirmuhaajir.github.io" class="sitemap-card">
-              <i class="fas fa-home"></i>
-              <h4>Beranda</h4>
-              <p>Profil, Bio, Galeri, Audio Player</p>
-            </a>
-            <a href="#" class="sitemap-card">
-              <i class="fas fa-music"></i>
-              <h4>Showcase</h4>
-              <p>Portofolio musik &amp; fotografi</p>
-            </a>
-            <a href="#" class="sitemap-card">
-              <i class="fas fa-tools"></i>
-              <h4>Tools</h4>
-              <p>Hajirsync • Muhaajir Delta • Muhaajir Scrub • Mehaajir Vault</p>
-            </a>
-          </div>
-
-          <h3>Navigasi Utama</h3>
-          <p>
-            <a href="https://hajirmuhaajir.github.io">Beranda</a> (Profil, Bio, Galeri, Audio Player)<br>
-            <a href="#">Legal</a> (Privacy, Terms &amp; Conditions, Sitemap)<br>
-            <a href="#">Tools</a> (Hajirsync, Muhaajir Delta, Muhaajir Scrub, Mehaajir Vault)
-          </p>
-
-          <h3>Katalog Konten &amp; Tools</h3>
-          <p>Koleksi Audio: 12 lagu original (5 Fragmen Suara + 7 Resonansi Dalam Diam)<br>
-          Koleksi Visual: 3 galeri foto high-resolution<br>
-          Tools Digital: Hajirsync • Muhaajir Delta • Muhaajir Scrub • Mehaajir Vault</p>
-
-          <h3>Media Sosial &amp; Kontak</h3>
-          <p>
-            <a href="https://www.youtube.com/@hajirstein" target="_blank" rel="noopener">YouTube: @hajirstein</a><br>
-            <a href="https://www.tiktok.com/@muhaajir_muhaajir" target="_blank" rel="noopener">TikTok: @muhaajir_muhaajir</a><br>
-            <a href="https://www.instagram.com/muhaajirere" target="_blank" rel="noopener">Instagram: @muhaajirere</a><br>
-            <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" target="_blank" rel="noopener">SoundCloud: Muhaajir</a><br>
-            <a href="https://github.com/hajirmuhaajir" target="_blank" rel="noopener">GitHub: hajirmuhaajir</a>
-          </p>
-          <p><strong>Kontak resmi melalui formulir Formspree di halaman utama.</strong></p>
-
-          <div class="changelog">
-            <h3 style="margin-top: 0; margin-bottom: 12px;">📋 Riwayat Versi Terbaru — v.3.6 (10 Mei 2026)</h3>
-            <p style="margin-bottom: 0;">
-              ✓ Migrasi URL: <code>hajirmuhaajir.github.io/main</code> → <code>hajirmuhaajir.github.io</code><br>
-              ✓ Penambahan footer-essentials dengan 2 varian (Full &amp; Compact)<br>
-              ✓ Ikon media sosial menggunakan FontAwesome standar<br>
-              ✓ Tombol Back to Top dengan smooth scroll<br>
-              ✓ Copyright &amp; Last updated timestamp otomatis (JavaScript dinamis)<br>
-              ✓ Skip to main content untuk aksesibilitas<br>
-              ✓ Semantic HTML (article, section, nav) untuk struktur lebih baik<br>
-              ✓ Disclaimer tambahan untuk penggunaan tools<br>
-              ✓ I18N bilingual (ID/EN) lengkap di semua konten<br>
-              ✓ Hyperlink aktif di seluruh sitemap
-            </p>
-            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-              <strong>Riwayat sebelumnya v.3.5 (1 Mei 2026):</strong> Migrasi logo ke .webp, sistem ganti logo otomatis (Hitam/Putih) sesuai tema, validasi Formspree (nama min. 4 huruf, pesan min. 20 karakter), teks bilingual ID/EN yang ramah, tombol aksesibel min. 48px, label status proyek (Stable/WIP/Beta), dan penghapusan email Yahoo.
-            </p>
-          </div>
-        </article>
-      </section>
-    </div>
-  </main>
-
-  <!-- FOOTER - FULL VERSION (Default - Gunakan class footer-full atau footer-compact sesuai kebutuhan) -->
-  <footer class="footer-full">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <img src="https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp" alt="Logo Muhaajir Official" width="48" height="48" style="border-radius: 50%;">
-            <h4 style="margin: 0;">Muhaajir</h4>
-          </div>
-          <p style="font-size: 0.9rem;">Musik • Fotografi • Tools Digital</p>
-          <div class="social-links">
-            <a href="https://www.youtube.com/@hajirstein" class="social-link" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@muhaajir_muhaajir" class="social-link" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/muhaajirere" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" class="social-link" target="_blank" rel="noopener" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-            <a href="https://github.com/hajirmuhaajir" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
+    <!-- Sitemap -->
+    <section id="sitemap" class="section">
+      <article class="card">
+        <div class="card-header"><div class="card-icon"><i class="fas fa-sitemap"></i></div><div><h2 data-i18n="sitemap.title">Sitemap</h2><p data-i18n="sitemap.subtitle">Navigasi lengkap situs Muhaajir Official – Versi 3.6</p></div></div>
+        <div class="sitemap-grid">
+          <a href="https://hajirmuhaajir.github.io" class="sitemap-card"><i class="fas fa-home"></i><h4 data-i18n="sitemap.home">Beranda</h4><p data-i18n="sitemap.home.desc">Profil, Bio, Galeri, Audio Player</p></a>
+          <a href="#" class="sitemap-card"><i class="fas fa-music"></i><h4 data-i18n="sitemap.showcase">Showcase</h4><p data-i18n="sitemap.showcase.desc">Portofolio musik & fotografi</p></a>
+          <a href="#" class="sitemap-card"><i class="fas fa-tools"></i><h4 data-i18n="sitemap.tools">Tools</h4><p data-i18n="sitemap.tools.desc">Hajirsync • Delta • Scrub • Vault</p></a>
         </div>
-        <div class="footer-col">
-          <h4>Navigasi</h4>
-          <ul>
-            <li><a href="https://hajirmuhaajir.github.io">Beranda</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Musik</a></li>
-            <li><a href="#">Fotografi</a></li>
-            <li><a href="#">Tools</a></li>
-          </ul>
+        <h3 data-i18n="sitemap.nav.title">Navigasi Utama</h3>
+        <p><a href="https://hajirmuhaajir.github.io" data-i18n="sitemap.nav.home">Beranda</a> | <a href="#" data-i18n="sitemap.nav.legal">Legal</a> | <a href="#" data-i18n="sitemap.nav.tools">Tools</a></p>
+        <h3 data-i18n="sitemap.content.title">Katalog Konten & Tools</h3>
+        <p data-i18n="sitemap.content.desc">Koleksi Audio: 12 lagu original (5 Fragmen Suara + 7 Resonansi Dalam Diam)<br>Koleksi Visual: 3 galeri foto high-resolution<br>Tools Digital: Hajirsync • Muhaajir Delta • Muhaajir Scrub • Mehaajir Vault</p>
+        <h3 data-i18n="sitemap.social.title">Media Sosial & Kontak</h3>
+        <p><a href="https://www.youtube.com/@hajirstein" target="_blank">YouTube: @hajirstein</a><br><a href="https://www.tiktok.com/@muhaajir_muhaajir" target="_blank">TikTok: @muhaajir_muhaajir</a><br><a href="https://www.instagram.com/muhaajirere" target="_blank">Instagram: @muhaajirere</a><br><a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" target="_blank">SoundCloud: Muhaajir</a><br><a href="https://github.com/hajirmuhaajir" target="_blank">GitHub: hajirmuhaajir</a><br><strong data-i18n="sitemap.contact.note">Kontak resmi melalui formulir Formspree di halaman utama.</strong></p>
+        <div class="changelog">
+          <h3 data-i18n="changelog.title">📋 Riwayat Versi Terbaru — v.3.6 (10 Mei 2026)</h3>
+          <p data-i18n="changelog.desc">✓ Migrasi URL ke hajirmuhaajir.github.io<br>✓ I18N bilingual lengkap di seluruh halaman<br>✓ Footer dengan link fungsional dan sosial media<br>✓ Back to top, progress bar, dark mode persisten<br>✓ Aksesibilitas: skip link, heading terstruktur, ARIA</p>
         </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Kebijakan Privasi</a></li>
-            <li><a href="#">Syarat &amp; Ketentuan</a></li>
-            <li><a href="#">Lisensi Musik</a></li>
-            <li><a href="#">Disclaimer</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Lainnya</h4>
-          <ul>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Kontak</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="currentYear"></span> Muhaajir Official. All Rights Reserved.</p>
-        <p class="footer-disclaimer">
-          <i class="fas fa-exclamation-triangle"></i> Disclaimer: Penggunaan tools sepenuhnya tanggung jawab pengguna. Muhaajir tidak bertanggung jawab atas kerusakan atau kehilangan data yang timbul dari penggunaan tools.
-        </p>
-        <p class="footer-disclaimer">Last updated: <span id="lastModifiedFooter"></span> | Versi 3.6</p>
-      </div>
-    </div>
-  </footer>
+      </article>
+    </section>
+  </div>
+</main>
 
-  <!-- BACK TO TOP BUTTON -->
-  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- FOOTER COMPACT VERSION (Alternatif - Uncomment untuk menggunakan) -->
-  <!--
-  <footer class="footer-compact">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="copyright">© <span id="currentYear2"></span> Muhaajir Official. All rights reserved.</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+          <img src="https://i.postimg.cc/JztFxsRH/hajir-logo-putih.webp" alt="Logo" width="48" height="48" style="border-radius: 50%;">
+          <h4>Muhaajir</h4>
+        </div>
+        <p data-i18n="footer.tagline">Musik • Fotografi • Tools Digital</p>
         <div class="social-links">
-          <a href="https://www.youtube.com/@hajirstein" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.tiktok.com/@muhaajir_muhaajir" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/muhaajirere" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" class="social-link" target="_blank"><i class="fab fa-soundcloud"></i></a>
-          <a href="https://github.com/hajirmuhaajir" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/@hajirstein" class="social-link" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@muhaajir_muhaajir" class="social-link" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/muhaajirere" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://on.soundcloud.com/m65TNUx3XarndC67jO" class="social-link" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+          <a href="https://github.com/hajirmuhaajir" class="social-link" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav">Navigasi</h4>
+        <ul>
+          <li><a href="https://hajirmuhaajir.github.io" data-i18n="footer.home">Beranda</a></li>
+          <li><a href="#" data-i18n="footer.about">Tentang</a></li>
+          <li><a href="#" data-i18n="footer.music">Musik</a></li>
+          <li><a href="#" data-i18n="footer.tools">Tools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="#privacy" data-i18n="footer.privacy">Kebijakan Privasi</a></li>
+          <li><a href="#terms" data-i18n="footer.terms">Syarat & Ketentuan</a></li>
+          <li><a href="#sitemap" data-i18n="footer.sitemap">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact">Kontak</h4>
+        <ul>
+          <li><a href="https://hajirmuhaajir.github.io#contact" data-i18n="footer.form">Hubungi Kami</a></li>
+          <li><a href="#" data-i18n="footer.support">Support</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  -->
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Muhaajir Official. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
+      <p class="footer-disclaimer"><i class="fas fa-exclamation-triangle"></i> <span data-i18n="footer.disclaimer">Disclaimer: Penggunaan tools sepenuhnya tanggung jawab pengguna. Muhaajir tidak bertanggung jawab atas kerusakan atau kehilangan data.</span></p>
+      <p><span data-i18n="footer.lastUpdated">Terakhir diperbarui:</span> <span id="lastModifiedFooter"></span> | v3.6</p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    // ==================== AUTO UPDATE TAHUN & LAST MODIFIED ====================
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+<button class="back-to-top" id="backToTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
 
-    const lastMod = new Date(document.lastModified);
-    const formattedDate = lastMod.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
-    
-    if (document.getElementById('lastModifiedFooter')) {
-      document.getElementById('lastModifiedFooter').textContent = formattedDate;
-    }
-
-    // ==================== BACK TO TOP ====================
-    const backBtn = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backBtn.classList.add('show');
-      } else {
-        backBtn.classList.remove('show');
-      }
-    });
-    
-    backBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // ==================== PROGRESS BAR ====================
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      const progressBar = document.getElementById('progressBar');
-      if (progressBar) {
-        progressBar.style.transform = `scaleX(${progress / 100})`;
-      }
-    });
-
-    // ==================== TAB NAVIGATION ====================
-    const tabs = document.querySelectorAll('.nav-tab');
-    const sections = document.querySelectorAll('.section');
-    
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetId = tab.getAttribute('data-tab');
-        
-        tabs.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        
-        sections.forEach(section => {
-          section.classList.remove('active');
-        });
-        
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.classList.add('active');
-        }
-      });
-    });
-
-    // ==================== PRINT PDF ====================
-    const printBtn = document.getElementById('printPDFBtn');
-    if (printBtn) {
-      printBtn.addEventListener('click', () => {
-        window.print();
-      });
-    }
-
-    // ==================== DARK MODE ====================
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    function setTheme(theme) {
-      document.body.setAttribute('data-theme', theme);
-    }
-    
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      setTheme(prefersDark.matches ? 'dark' : 'light');
-    }
-    
-    prefersDark.addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    });
-
-    // ==================== I18N TRANSLATIONS ====================
+<script>
+  (function() {
+    // ========== I18N COMPLETE ==========
     const translations = {
       id: {
-        hero: { title: 'Legal & Sitemap', subtitle: 'Dokumen resmi Muhaajir Official – Musik · Fotografi · Tools Digital', version: 'Versi 3.6 — 10 Mei 2026' },
-        nav: { privacy: 'Privasi', terms: 'Syarat & Ketentuan', sitemap: 'Sitemap' }
+        hero: { title: "Legal & Sitemap", subtitle: "Dokumen resmi Muhaajir Official – Musik · Fotografi · Tools Digital", version: "Versi 3.6 — 10 Mei 2026" },
+        nav: { privacy: "Privasi", terms: "Syarat & Ketentuan", sitemap: "Sitemap" },
+        privacy: {
+          title: "Kebijakan Privasi", version: "Versi 3.6 — 10 Mei 2026",
+          commitment: { title: "Komitmen Privasi", desc: "Saya, Muhaajir, berkomitmen melindungi privasi Anda dengan transparan. Data Anda tidak pernah dijual, disewakan, atau dibagikan untuk keperluan pemasaran." },
+          data: { title: "1. Data yang Dikumpulkan", desc: "Informasi sukarela (nama, pesan) melalui formulir kontak. Data teknis anonim (IP, browser) via Google Analytics. Preferensi lokal (bahasa, tema) disimpan di browser Anda. Tools digital tidak mengirim data pribadi ke server." },
+          cookies: { title: "2. Cookies & Pihak Ketiga", desc: "Cookies fungsional untuk menyimpan preferensi. Google Analytics (anonim). Formulir diproses oleh Formspree (data dihapus maksimal 30 hari). Link eksternal tunduk pada kebijakan masing-masing." },
+          security: { title: "3. Keamanan Data", desc: "Seluruh situs menggunakan HTTPS/TLS. Content Security Policy (CSP) aktif. Validasi input dan akses data sangat dibatasi." },
+          rights: { title: "4. Hak Anda", desc: "Anda berhak mengakses, memperbaiki, atau menghapus data pribadi Anda. Untuk menggunakan hak tersebut, hubungi melalui formulir kontak di halaman utama." }
+        },
+        terms: {
+          title: "Syarat & Ketentuan", version: "Versi 3.6 — 10 Mei 2026",
+          intro: "Dengan mengakses situs ini, Anda dianggap menyetujui ketentuan berikut:",
+          ip: { title: "1. Kekayaan Intelektual & Lisensi", desc: "Semua karya musik (12 lagu original), foto, teks, desain, dan tools digital adalah milik penuh Muhaajir. Penggunaan personal gratis. Penggunaan komersial wajib lisensi. Cover / remix diperbolehkan dengan mencantumkan kredit: \"© Muhaajir\"." },
+          prohibited: { title: "2. Larangan", desc: "Dilarang mendistribusikan ulang, menjual, atau mengklaim kepemilikan konten tanpa izin tertulis. Dilarang scraping otomatis atau upaya meretas sistem." },
+          disclaimer: { title: "3. Batasan Tanggung Jawab", desc: "Situs dan konten disediakan \"sebagaimana adanya\". Kami tidak bertanggung jawab atas kegagalan unduhan atau dampak teknis dari penggunaan tools. Tautan eksternal bukan endorsement." },
+          law: { title: "4. Hukum Berlaku", desc: "Setiap sengketa diselesaikan di bawah hukum Indonesia, domisili Bogor." }
+        },
+        sitemap: {
+          title: "Sitemap", subtitle: "Navigasi lengkap situs Muhaajir Official – Versi 3.6",
+          home: "Beranda", home_desc: "Profil, Bio, Galeri, Audio Player",
+          showcase: "Showcase", showcase_desc: "Portofolio musik & fotografi",
+          tools: "Tools", tools_desc: "Hajirsync • Delta • Scrub • Vault",
+          nav: { title: "Navigasi Utama", home: "Beranda", legal: "Legal", tools: "Tools" },
+          content: { title: "Katalog Konten & Tools", desc: "Koleksi Audio: 12 lagu original (5 Fragmen Suara + 7 Resonansi Dalam Diam)\nKoleksi Visual: 3 galeri foto high-resolution\nTools Digital: Hajirsync • Muhaajir Delta • Muhaajir Scrub • Mehaajir Vault" },
+          social: { title: "Media Sosial & Kontak", note: "Kontak resmi melalui formulir Formspree di halaman utama." }
+        },
+        changelog: { title: "📋 Riwayat Versi Terbaru — v.3.6 (10 Mei 2026)", desc: "✓ Migrasi URL ke hajirmuhaajir.github.io\n✓ I18N bilingual lengkap di seluruh halaman\n✓ Footer dengan link fungsional dan sosial media\n✓ Back to top, progress bar, dark mode persisten\n✓ Aksesibilitas: skip link, heading terstruktur, ARIA" },
+        footer: {
+          tagline: "Musik • Fotografi • Tools Digital",
+          nav: "Navigasi", home: "Beranda", about: "Tentang", music: "Musik", tools: "Tools",
+          legal: "Legal", privacy: "Kebijakan Privasi", terms: "Syarat & Ketentuan", sitemap: "Sitemap",
+          contact: "Kontak", form: "Hubungi Kami", support: "Support",
+          rights: "All Rights Reserved.",
+          disclaimer: "Disclaimer: Penggunaan tools sepenuhnya tanggung jawab pengguna. Muhaajir tidak bertanggung jawab atas kerusakan atau kehilangan data.",
+          lastUpdated: "Terakhir diperbarui:"
+        }
       },
       en: {
-        hero: { title: 'Legal & Sitemap', subtitle: 'Official documents of Muhaajir Official – Music · Photography · Digital Tools', version: 'Version 3.6 — May 10, 2026' },
-        nav: { privacy: 'Privacy', terms: 'Terms & Conditions', sitemap: 'Sitemap' }
+        hero: { title: "Legal & Sitemap", subtitle: "Official documents of Muhaajir Official – Music · Photography · Digital Tools", version: "Version 3.6 — May 10, 2026" },
+        nav: { privacy: "Privacy", terms: "Terms & Conditions", sitemap: "Sitemap" },
+        privacy: {
+          title: "Privacy Policy", version: "Version 3.6 — May 10, 2026",
+          commitment: { title: "Privacy Commitment", desc: "I, Muhaajir, am committed to protecting your privacy transparently. Your data is never sold, rented, or shared for marketing purposes." },
+          data: { title: "1. Data Collected", desc: "Voluntary information (name, message) via contact form. Anonymous technical data (IP, browser) via Google Analytics. Local preferences (language, theme) stored in your browser. Digital tools do not send personal data to servers." },
+          cookies: { title: "2. Cookies & Third Parties", desc: "Functional cookies to store preferences. Google Analytics (anonymous). Forms processed by Formspree (data deleted after max 30 days). External links subject to their own policies." },
+          security: { title: "3. Data Security", desc: "Entire site uses HTTPS/TLS. Content Security Policy (CSP) active. Input validation and strict data access." },
+          rights: { title: "4. Your Rights", desc: "You have the right to access, correct, or delete your personal data. To exercise these rights, contact via the contact form on the main page." }
+        },
+        terms: {
+          title: "Terms & Conditions", version: "Version 3.6 — May 10, 2026",
+          intro: "By accessing this site, you agree to the following terms:",
+          ip: { title: "1. Intellectual Property & License", desc: "All musical works (12 original songs), photos, text, designs, and digital tools are fully owned by Muhaajir. Personal use is free. Commercial use requires a license. Covers/remixes are allowed with credit: \"© Muhaajir\"." },
+          prohibited: { title: "2. Prohibitions", desc: "Redistributing, selling, or claiming ownership of content without written permission is prohibited. Automated scraping or hacking attempts are forbidden." },
+          disclaimer: { title: "3. Limitation of Liability", desc: "Site and content are provided 'as is'. We are not responsible for download failures or technical impacts from using tools. External links are not endorsements." },
+          law: { title: "4. Governing Law", desc: "Any disputes shall be resolved under Indonesian law, domiciled in Bogor." }
+        },
+        sitemap: {
+          title: "Sitemap", subtitle: "Complete navigation of Muhaajir Official – Version 3.6",
+          home: "Home", home_desc: "Profile, Bio, Gallery, Audio Player",
+          showcase: "Showcase", showcase_desc: "Music & photography portfolio",
+          tools: "Tools", tools_desc: "Hajirsync • Delta • Scrub • Vault",
+          nav: { title: "Main Navigation", home: "Home", legal: "Legal", tools: "Tools" },
+          content: { title: "Content & Tools Catalog", desc: "Audio Collection: 12 original songs (5 Fragmen Suara + 7 Resonansi Dalam Diam)\nVisual Collection: 3 high-resolution photo galleries\nDigital Tools: Hajirsync • Muhaajir Delta • Muhaajir Scrub • Mehaajir Vault" },
+          social: { title: "Social Media & Contact", note: "Official contact via Formspree form on the main page." }
+        },
+        changelog: { title: "📋 Latest Version History — v.3.6 (May 10, 2026)", desc: "✓ URL migration to hajirmuhaajir.github.io\n✓ Full bilingual I18N across all pages\n✓ Footer with functional links and social media\n✓ Back to top, progress bar, persistent dark mode\n✓ Accessibility: skip link, structured headings, ARIA" },
+        footer: {
+          tagline: "Music • Photography • Digital Tools",
+          nav: "Navigation", home: "Home", about: "About", music: "Music", tools: "Tools",
+          legal: "Legal", privacy: "Privacy Policy", terms: "Terms & Conditions", sitemap: "Sitemap",
+          contact: "Contact", form: "Contact Us", support: "Support",
+          rights: "All Rights Reserved.",
+          disclaimer: "Disclaimer: Use of tools is entirely at your own risk. Muhaajir is not responsible for any damage or data loss.",
+          lastUpdated: "Last updated:"
+        }
       }
     };
 
     let currentLang = localStorage.getItem('lang') || 'id';
     const langToggle = document.getElementById('langToggle');
-
+    
     function applyTranslations(lang) {
       const t = translations[lang];
-      
-      const heroTitle = document.querySelector('[data-i18n="hero.title"]');
-      const heroSubtitle = document.querySelector('[data-i18n="hero.subtitle"]');
-      const heroVersion = document.querySelector('[data-i18n="hero.version"]');
-      
-      if (heroTitle) heroTitle.textContent = t.hero.title;
-      if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
-      if (heroVersion) heroVersion.textContent = t.hero.version;
-      
-      const navPrivacy = document.querySelector('[data-i18n="nav.privacy"]');
-      const navTerms = document.querySelector('[data-i18n="nav.terms"]');
-      const navSitemap = document.querySelector('[data-i18n="nav.sitemap"]');
-      
-      if (navPrivacy) navPrivacy.textContent = t.nav.privacy;
-      if (navTerms) navTerms.textContent = t.nav.terms;
-      if (navSitemap) navSitemap.textContent = t.nav.sitemap;
-      
-      if (langToggle) {
-        langToggle.textContent = lang === 'id' ? 'EN' : 'ID';
-      }
-      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const keys = el.getAttribute('data-i18n').split('.');
+        let value = t;
+        for (let k of keys) if (value[k]) value = value[k]; else break;
+        if (typeof value === 'string') el.textContent = value;
+      });
+      if (langToggle) langToggle.textContent = lang === 'id' ? 'EN' : 'ID';
       localStorage.setItem('lang', lang);
       currentLang = lang;
-    }
-
-    if (langToggle) {
-      langToggle.addEventListener('click', () => {
-        const newLang = currentLang === 'id' ? 'en' : 'id';
-        applyTranslations(newLang);
-      });
+      // update last modified date localization
+      updateLastModified(lang);
     }
     
+    function updateLastModified(lang) {
+      const el = document.getElementById('lastModifiedFooter');
+      if (!el) return;
+      const date = new Date(document.lastModified);
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formatted = date.toLocaleDateString(lang === 'id' ? 'id-ID' : 'en-US', options);
+      el.textContent = formatted;
+    }
+    
+    langToggle?.addEventListener('click', () => {
+      applyTranslations(currentLang === 'id' ? 'en' : 'id');
+    });
+    
     applyTranslations(currentLang);
-
-    // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
+    
+    // Year dynamic
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    updateLastModified(currentLang);
+    
+    // ========== DARK MODE ==========
+    const setTheme = (theme) => document.body.setAttribute('data-theme', theme);
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme) setTheme(savedTheme);
+    else setTheme(prefersDark ? 'dark' : 'light');
+    
+    // ========== PROGRESS BAR ==========
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.transform = `scaleX(${scrolled / 100})`;
+    });
+    
+    // ========== BACK TO TOP ==========
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) backBtn.classList.add('show');
+      else backBtn.classList.remove('show');
+    });
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    
+    // ========== TAB NAVIGATION ==========
+    const tabs = document.querySelectorAll('.nav-tab');
+    const sections = { privacy: document.getElementById('privacy'), terms: document.getElementById('terms'), sitemap: document.getElementById('sitemap') };
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        Object.values(sections).forEach(sec => sec.classList.remove('active'));
+        sections[target]?.classList.add('active');
+      });
+    });
+    
+    // ========== PRINT / PDF ==========
+    document.getElementById('printPDFBtn')?.addEventListener('click', () => window.print());
+    
+    // ========== SMOOTH SCROLL UNTUK ANCHOR ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -1054,11 +712,12 @@
           const target = document.querySelector(href);
           if (target) {
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.scrollIntoView({ behavior: 'smooth' });
           }
         }
       });
     });
-  </script>
+  })();
+</script>
 </body>
 </html>
